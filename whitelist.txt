@@ -57,6 +57,7 @@ icloud.com
 imgs.xkcd.com
 i.s-microsoft.com
 j.mp
+ssl.p.jwpcdn.com
 keystone.mwbsys.com
 licensing.xboxlive.com
 login.aliexpress.com
