@@ -1,4 +1,5 @@
 akamaitechnologies.com
+adf.ly
 alluremedia.com.au
 android.clients.google.com
 api.ipify.org
