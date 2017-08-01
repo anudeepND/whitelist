@@ -102,6 +102,7 @@ support.microsoft.com
 surveymonkey.com
 s.youtube.com
 s.ytimg.com
+s.marketwatch.com
 tedcdn.com
 themoviedb.com
 thetvdb.com
