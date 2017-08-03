@@ -52,6 +52,7 @@ geo-prod.do.dsp.mp.microsoft.com
 g.live.com
 goo.gl
 gravatar.com
+graph.facebook.com
 help.ui.xboxlive.com
 hls.ted.com
 icloud.com
