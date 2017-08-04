@@ -129,3 +129,4 @@ xflight.xboxlive.com
 xkms.xbolive.com
 xsts.auth.xboxlive.com
 cse.google.com
+2.android.pool.ntp.org
