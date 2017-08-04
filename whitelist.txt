@@ -128,3 +128,4 @@ xbox.ipv6.microsoft.com
 xflight.xboxlive.com
 xkms.xbolive.com
 xsts.auth.xboxlive.com
+cse.google.com
