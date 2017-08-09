@@ -10,6 +10,7 @@ attestation.xboxlive.com
 ax.phobos.apple.com.edgesuite.net
 bit.ly
 brightcove.net
+display.ugc.bazaarvoice.com
 cdn.embedly.com
 cdn.optimizely.com
 cert.mgt.xboxlive.com
