@@ -132,3 +132,6 @@ xsts.auth.xboxlive.com
 cse.google.com
 2.android.pool.ntp.org
 imagesak.secureserver.net
+www.youtube-nocookie.com
+youtube-nocookie.com
+i1.ytimg.com
