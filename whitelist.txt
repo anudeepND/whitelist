@@ -135,3 +135,4 @@ imagesak.secureserver.net
 www.youtube-nocookie.com
 youtube-nocookie.com
 i1.ytimg.com
+s.ytimg.com
