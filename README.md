@@ -1,4 +1,4 @@
-### White-list
+### Commonly whitelisted domains
 
 These domains are borrowed from various sources including reddit, GitHub and other forums.
 You can request additional domains via <a href="https://github.com/anudeepND/whitelist/issues">Issues</a> tab.
@@ -25,3 +25,8 @@ If you're using pi-hole, you can quickly add these sites to your whitelist.txt, 
 For Chrome ctrl+shift+I will land you in Developer tools menu.
 ![Alt text](http://i.imgur.com/44CHRLV.png)
 
+##### Note:
+Some deals sites like Slickdeals and Fatwallet needs ad sites to work correctly, you can use `referral-sites.txt`to whitelist some domains.  
+To add them quickly to whitelist:  
+•`sudo -s`  
+•`curl -sS https://raw.githubusercontent.com/anudeepND/whitelist/master/referral-sites.txt >> /etc/pihole/whitelist.txt`
