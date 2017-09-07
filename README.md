@@ -26,7 +26,9 @@ For Chrome ctrl+shift+I will land you in Developer tools menu.
 ![Alt text](http://i.imgur.com/44CHRLV.png)
 
 ##### Note:
-Some deals sites like Slickdeals and Fatwallet needs ad sites to work correctly, you can use `referral-sites.txt`to whitelist some domains.  
+Some deals sites like Slickdeals and Fatwallet needs a few sites (most of  them are ads) to be whitelisted to work properly, you can use `referral-sites.txt`file for this.  
+ 
 To add them quickly to whitelist:  
-•`sudo -s`  
+•`sudo -s`  
+  
 •`curl -sS https://raw.githubusercontent.com/anudeepND/whitelist/master/referral-sites.txt >> /etc/pihole/whitelist.txt`
