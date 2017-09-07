@@ -9,6 +9,14 @@ If you're using pi-hole, you can quickly add these sites to your whitelist.txt, 
 
 •`curl -sS https://raw.githubusercontent.com/anudeepND/whitelist/master/whitelist.txt >> /etc/pihole/whitelist.txt`
 
+Some deals sites like Slickdeals and Fatwallet needs a few sites (most of  them are ads) to be whitelisted to work properly, you can use `referral-sites.txt`file for this.  
+ 
+To add them quickly to whitelist:  
+•`sudo -s`  
+  
+•`curl -sS https://raw.githubusercontent.com/anudeepND/whitelist/master/referral-sites.txt >> /etc/pihole/whitelist.txt`
+
+
 
 ##### How do I determine an ad domain?
 
@@ -25,10 +33,4 @@ If you're using pi-hole, you can quickly add these sites to your whitelist.txt, 
 For Chrome ctrl+shift+I will land you in Developer tools menu.
 ![Alt text](http://i.imgur.com/44CHRLV.png)
 
-##### Note:
-Some deals sites like Slickdeals and Fatwallet needs a few sites (most of  them are ads) to be whitelisted to work properly, you can use `referral-sites.txt`file for this.  
- 
-To add them quickly to whitelist:  
-•`sudo -s`  
-  
-•`curl -sS https://raw.githubusercontent.com/anudeepND/whitelist/master/referral-sites.txt >> /etc/pihole/whitelist.txt`
+
