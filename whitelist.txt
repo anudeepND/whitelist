@@ -89,6 +89,7 @@ proxy.plex.tv metrics.plex.tv
 pubsub.plex.bz
 pubsub.plex.tv status.plex.tv
 raw.githubusercontent.com
+redirector.googlevideo.com
 rtevents.olacabs.com
 s3.amazonaws.com
 sa.symcb.com
