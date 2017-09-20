@@ -23,6 +23,8 @@ cpms.spop10.ams.plex.bz
 creative.ak.fbcdn.net
 c.s-microsoft.com
 ctldl.windowsupdate.com
+www.dataplicity.com
+dataplicity.com
 def-vef.xboxlive.com
 device.auth.xboxlive.com
 displaycatalog.mp.microsoft.com
