@@ -69,13 +69,15 @@ login.aliexpress.com
 login.live.com
 meta-db-worker02.pop.ric.plex.bz
 meta.plex.bz
-meta.plex.tv cpms35.spop10.ams.plex.bz
+meta.plex.tv
+cpms35.spop10.ams.plex.bz
 m.hotmail.com
 msftncsi.com
 notify.xboxlive.com
 ns1.dropbox.com
 ns2.dropbox.com
-o2.sg0.plex.tv dashboard.plex.tv
+o2.sg0.plex.tv
+dashboard.plex.tv
 officeclient.microsoft.com
 outlook.office365.com
 ow.ly
@@ -102,7 +104,8 @@ settings-win.data.microsoft.com
 s.gateway.messenger.live.com
 skyhook.sonarr.tv
 spclient.wg.spotify.com
-staging.plex.tv app.plex.tv o1.email.plex.tv
+staging.plex.tv app.plex.tv
+o1.email.plex.tv
 support.microsoft.com
 surveymonkey.com
 s.youtube.com
@@ -124,7 +127,8 @@ www.bit.ly
 www.icloud.com
 www.msftncsi.com
 www.no-ip.com
-www.plex.tv node.plexapp.com nine.plugins.plexapp.com
+www.plex.tv node.plexapp.com
+nine.plugins.plexapp.com
 www.solaredge.com
 www.xboxlive.com
 xboxexperiencesprod.experimentation.xboxlive.com
