@@ -1,9 +1,9 @@
-### Commonly whitelisted domains
+### Commonly whitelisted domains for Pi-Hole.
 
-These domains are borrowed from various sources including reddit, GitHub and other forums.
+These domains are borrowed from various sources including reddit, GitHub and other sources.
 You can request additional domains via <a href="https://github.com/anudeepND/whitelist/issues">Issues</a> tab.
 
-If you're using pi-hole, you can quickly add these sites to your whitelist.txt, to do this: 
+[Pi-hole](https://pi-hole.net) users can quickly add these sites to your whitelist.txt by:
 
 • `sudo -s` 
 
