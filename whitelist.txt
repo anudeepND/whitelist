@@ -147,3 +147,5 @@ win10.ipv6.microsoft.com
 scontent.fgdl5-1.fna.fbcdn.net
 d2c8v52ll5s99u.cloudfront.net
 appleid.apple.com
+appsbackup-pa.googleapis.com
+appsbackup-pa.clients6.google.com
