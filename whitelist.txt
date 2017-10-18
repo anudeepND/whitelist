@@ -89,9 +89,10 @@ pricelist.skype.com
 products.office.com
 proxy02.pop.ord.plex.bz
 proxy.plex.bz
-proxy.plex.tv metrics.plex.tv
+proxy.plex.tv
 pubsub.plex.bz
-pubsub.plex.tv status.plex.tv
+pubsub.plex.tv
+status.plex.tv
 raw.githubusercontent.com
 redirector.googlevideo.com
 s3.amazonaws.com
@@ -104,7 +105,8 @@ settings-win.data.microsoft.com
 s.gateway.messenger.live.com
 skyhook.sonarr.tv
 spclient.wg.spotify.com
-staging.plex.tv app.plex.tv
+staging.plex.tv
+app.plex.tv
 o1.email.plex.tv
 support.microsoft.com
 surveymonkey.com
@@ -127,7 +129,8 @@ www.bit.ly
 www.icloud.com
 www.msftncsi.com
 www.no-ip.com
-www.plex.tv node.plexapp.com
+www.plex.tv
+node.plexapp.com
 nine.plugins.plexapp.com
 www.solaredge.com
 www.xboxlive.com
