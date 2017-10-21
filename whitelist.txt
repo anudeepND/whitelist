@@ -153,3 +153,4 @@ appleid.apple.com
 appsbackup-pa.googleapis.com
 appsbackup-pa.clients6.google.com
 dsms0mj1bbhn4.cloudfront.net
+shareaholic.com
