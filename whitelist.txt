@@ -13,6 +13,8 @@ brightcove.net
 display.ugc.bazaarvoice.com
 cdn.embedly.com
 cdn.optimizely.com
+cdn2.optimizely.com
+cdn3.optimizely.com
 cert.mgt.xboxlive.com
 clients2.google.com
 clients3.google.com
