@@ -154,3 +154,5 @@ d2c8v52ll5s99u.cloudfront.net
 appleid.apple.com
 appsbackup-pa.googleapis.com
 appsbackup-pa.clients6.google.com
+dsms0mj1bbhn4.cloudfront.net
+shareaholic.com
