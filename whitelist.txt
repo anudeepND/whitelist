@@ -156,3 +156,12 @@ appsbackup-pa.googleapis.com
 appsbackup-pa.clients6.google.com
 dsms0mj1bbhn4.cloudfront.net
 shareaholic.com
+manifest.googlevideo.com
+www.googleapis.com
+googleapis.com
+yt3.ggpht.com
+cdnjs.cloudflare.com
+i.ytimg.com
+fonts.gstatic.com
+ws.audioscrobbler.com
+lastfm-img2.akamaized.net
