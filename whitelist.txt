@@ -31,7 +31,6 @@ def-vef.xboxlive.com
 device.auth.xboxlive.com
 displaycatalog.mp.microsoft.com
 dl.delivery.mp.microsoft.com
-dl.delivery.mp.microsoft.com 
 dl.dropbox.com
 dl.dropboxusercontent.com
 dns.msftncsi.com
@@ -53,7 +52,6 @@ external-lhr9-1.xx.fbcdn.net
 fbcdn-creative-a.akamaihd.net
 forums.sonarr.tv
 geo-prod.do.dsp.mp.microsoft.com
-geo-prod.do.dsp.mp.microsoft.com 
 g.live.com
 goo.gl
 gravatar.com
