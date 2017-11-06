@@ -124,7 +124,6 @@ tvdb2.plex.tv
 tvthemes.plexapp.com
 tvthemes.plexapp.com.cdn.cloudflare.net
 ui.skype.com
-v10.vortex-win.data.microsoft.com
 video-stats.l.google.com
 widget-cdn.rpxnow.com
 www.bit.ly
