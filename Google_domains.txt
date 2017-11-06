@@ -24,3 +24,11 @@ lh3.googleusercontent.com
 lh4.googleusercontent.com
 lh5.googleusercontent.com
 lh6.googleusercontent.com
+t0.gstatic.com
+t1.gstatic.com
+t2.gstatic.com
+t3.gstatic.com
+googleweblight.com
+www.googleweblight.com
+fonts.googleapis.com
+maps.googleapis.com
