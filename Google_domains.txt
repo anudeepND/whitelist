@@ -50,3 +50,7 @@ geomobileservices-pa.googleapis.com
 ajax.googleapis.com
 clientservices.googleapis.com
 mobiledataplan-pa.googleapis.com
+compress.googlezip.net
+proxy.googlezip.net
+check.googlezip.net
+datasaver.googleapis.com
