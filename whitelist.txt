@@ -144,7 +144,6 @@ imagesak.secureserver.net
 www.youtube-nocookie.com
 youtube-nocookie.com
 i1.ytimg.com
-s.ytimg.com
 win10.ipv6.microsoft.com
 scontent.fgdl5-1.fna.fbcdn.net
 d2c8v52ll5s99u.cloudfront.net
