@@ -161,3 +161,5 @@ i.ytimg.com
 fonts.gstatic.com
 ws.audioscrobbler.com
 lastfm-img2.akamaized.net
+twitter.com
+www.twitter.com
