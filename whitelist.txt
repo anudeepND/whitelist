@@ -163,3 +163,5 @@ ws.audioscrobbler.com
 lastfm-img2.akamaized.net
 twitter.com
 www.twitter.com
+1drv.com
+onedrive.live.com
