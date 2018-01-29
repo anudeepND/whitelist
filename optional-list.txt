@@ -1,0 +1,44 @@
+# Contributed by Anudeep <anudeep@protonmail.com>
+# Project home page: https://github.com/anudeepND/whitelist
+# Licence: https://github.com/anudeepND/whitelist/blob/master/LICENSE
+
+
+# GeForce Experience
+
+events.gfe.nvidia.com
+gfwsl.geforce.com
+
+# Sky Go (skygo.sky.de)
+
+assets.adobedtm.com
+
+# Bild.de
+
+acdn.adnxs.com
+cdn1.smartadserver.com
+ec-ns.sascdn.com
+
+# WatchESPN
+
+fpdownload.adobe.com
+entitlement.auth.adobe.com
+livepassdl.conviva.com
+
+# Roku TV CW and NBC app
+
+cwtv-mrss-akamai.cwtv.com
+cwtv-prod-elb.digitalsmiths.net
+redirector.googlevideo.com
+
+# DirectTV Now
+
+js.maxmind.com
+directvnow.com
+directvapplications.hb.omtrdc.net
+s.zkcdn.net
+
+# Jackbox.tv 
+
+www.google-analytics.com
+google-analytics.com
+ssl.google-analytics.com
