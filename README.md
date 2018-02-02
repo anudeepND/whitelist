@@ -21,6 +21,10 @@ To add them quickly to whitelist:
 ####   optional-list.txt
 This file contain domains that are needed to be whitelisted depending on the service you use. (It may include analytics sites!)
 
+To add them quickly to whitelist:  
+•`sudo -s`  
+  
+•`curl -sS https://raw.githubusercontent.com/anudeepND/whitelist/master/optional-list.txt >> /etc/pihole/whitelist.txt`
 
 ##### How do I determine an ad domain?
 
