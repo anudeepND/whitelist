@@ -207,3 +207,6 @@ drift.com
 driftt.com
 bufferapp.com
 unsplash.com
+v.shopify.com
+s.shopify.com
+oscp.apple.com
