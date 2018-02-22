@@ -6,17 +6,20 @@ You can request additional domains via <a href="https://github.com/anudeepND/whi
 #### whitelist.txt
 [Pi-hole](https://pi-hole.net) users can quickly add these sites to your whitelist.txt by:
 
-• `sudo -s` 
-
-•`curl -sS https://raw.githubusercontent.com/anudeepND/whitelist/master/whitelist.txt >> /etc/pihole/whitelist.txt`
+• `git clone https://github.com/anudeepND/whitelist.git`   
+• `cd whitelist/scripts`   
+• `sudo chmod +x whitelist.sh`    
+• `sudo ./whitelist.sh`     
 
 #### referral-sites.txt
 Some deals sites like Slickdeals and Fatwallet needs a few sites (most of  them are ads) to be whitelisted to work properly, you can use `referral-sites.txt`file for this.  
  
-To add them quickly to whitelist:  
-•`sudo -s`  
-  
-•`curl -sS https://raw.githubusercontent.com/anudeepND/whitelist/master/referral-sites.txt >> /etc/pihole/whitelist.txt`
+To add them quickly to whitelist: 
+
+• `git clone https://github.com/anudeepND/whitelist.git`   
+• `cd whitelist/scripts`   
+• `sudo chmod +x referral.sh`    
+• `sudo ./referral.sh`   
   
 ####   optional-list.txt
 This file contain domains that are needed to be whitelisted depending on the service you use. (It may include analytics sites!)
