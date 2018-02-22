@@ -11,7 +11,7 @@ then
   apt-get -y install gawk;
 fi
 sleep 1
-sudo curl -sS https://raw.githubusercontent.com/anudeepND/whitelist/master/whitelist.txt >> /etc/pihole/whitelist.txt
+sudo curl -sS https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt >> /etc/pihole/whitelist.txt
 sleep 0.5
 echo -e " ${TICK} \e[32m Added to whitelist! \e[0m"
 sleep 0.5
