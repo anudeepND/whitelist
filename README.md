@@ -12,7 +12,8 @@ You can request additional domains via <a href="https://github.com/anudeepND/whi
 • `sudo ./whitelist.sh`     
 
 #### referral-sites.txt
-Some deals sites like Slickdeals and Fatwallet needs a few sites (most of  them are ads) to be whitelisted to work properly, you can use `referral-sites.txt`file for this.  
+Some deals sites like Slickdeals and Fatwallet needs a few sites (most of  them are ads) to be whitelisted to work properly, you can use `referral-sites.txt`file for this.    
+(`whitelist.txt` is recommended for every user as it doesn't contain any bad domains, if you use specific services like Fatwallet or Slickdeals etc. you should use `referral-sites.txt`)
  
 To add them quickly to whitelist: 
 
