@@ -1,3 +1,4 @@
+0.client-channel.google.com
 akamaitechnologies.com
 adf.ly
 alluremedia.com.au
@@ -187,6 +188,8 @@ fbcdn.net
 t.co
 twimg.com
 gstatic.com
+ssl.gstatic.com
+www.gstatic.com
 jsdelivr.net
 intercom.io
 office.com
@@ -211,3 +214,4 @@ unsplash.com
 v.shopify.com
 s.shopify.com
 oscp.apple.com
+mail.google.com
