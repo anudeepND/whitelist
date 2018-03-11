@@ -38,6 +38,7 @@ dl.dropboxusercontent.com
 dns.msftncsi.com
 download.sonarr.tv
 dynupdate.no-ip.com
+d2gatte9o95jao.cloudfront.net
 ec-ns.sascdn.com
 eds.xboxlive.com
 external-lhr0-1.xx.fbcdn.net
@@ -175,6 +176,7 @@ linkedin.com
 reddit.com
 vimeo.com
 youtube.com
+youtu.be
 pinterest.com
 facebook.com
 wordpress.com
