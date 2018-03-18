@@ -42,3 +42,13 @@ s.zkcdn.net
 www.google-analytics.com
 google-analytics.com
 ssl.google-analytics.com
+
+# Pluto.tv
+
+images.pluto.tv
+stitcher.pluto.tv
+siloh.pluto.tv
+silo.pluto.tv
+cdn-mobile.api.pluto.tv
+api.pluto.tv
+players.pluto.tv
