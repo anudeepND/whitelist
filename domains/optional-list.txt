@@ -52,3 +52,9 @@ silo.pluto.tv
 cdn-mobile.api.pluto.tv
 api.pluto.tv
 players.pluto.tv
+
+# Target's Weekly Ads
+
+weeklyad.target.com
+m.weeklyad.target.com
+weeklyad.target.com.edgesuite.net
