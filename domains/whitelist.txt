@@ -220,3 +220,7 @@ mail.google.com
 geo3.ggpht.com
 my.plexapp.com
 v10.events.data.microsoft.com
+ui.skype.com
+pricelist.skype.com
+apps.skype.com
+m.hotmail.com
