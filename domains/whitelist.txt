@@ -219,3 +219,4 @@ oscp.apple.com
 mail.google.com
 geo3.ggpht.com
 my.plexapp.com
+v10.events.data.microsoft.com
