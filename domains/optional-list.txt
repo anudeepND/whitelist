@@ -80,3 +80,8 @@ players.pluto.tv
 weeklyad.target.com
 m.weeklyad.target.com
 weeklyad.target.com.edgesuite.net
+
+# Share buttons on websites
+
+dsms0mj1bbhn4.cloudfront.net
+shareaholic.com
