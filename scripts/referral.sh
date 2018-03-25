@@ -26,9 +26,13 @@ echo -e " ${TICK} \e[32m Adding to whitelist... \e[0m"
 sleep 0.5
 echo -e " ${TICK} \e[32m Removing duplicates... \e[0m"
 sudo gawk -i inplace '!a[$0]++' /etc/pihole/whitelist.txt
+wait
+echo -e " ${TICK} \e[32m Restarting DNS service \e[0m"
+pihole restartdns > /dev/null
+wait
 echo -e " ${TICK} \e[32m Done! \e[0m"
 
 
-echo -e " \e[1m \e[90mStar me on GitHub, https://github.com/anudeepND/whitelist \e[0m"
-echo -e " \e[1m \e[90mHappy AdBlocking :)\e[0m"
+echo -e " \e[1m  Star me on GitHub, https://github.com/anudeepND/whitelist \e[0m"
+echo -e " \e[1m  Happy AdBlocking :)\e[0m"
 echo -e "\n\n"
