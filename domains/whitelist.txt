@@ -1,9 +1,3 @@
-# Commonly whtelisted file for Pi-Hole
-# Project homepage: https://github.com/anudeepND/whitelist
-# Licence: https://github.com/anudeepND/whitelist/blob/master/LICENSE
-# Created by Anudeep
-#================================================================================
-# Google domains, used by Gmail Google play etc.
 0.client-channel.google.com
 2.android.pool.ntp.org
 android.clients.google.com
@@ -21,19 +15,13 @@ googleapis.com
 gstatic.com
 www.googleapis.com
 yt3.ggpht.com
-#
-# Dropbox
 dl.dropbox.com
 dl.dropboxusercontent.com
 ns1.dropbox.com
 ns2.dropbox.com
-#
-# TED
 app-api.ted.com
 hls.ted.com
 tedcdn.com
-#
-# CDNs
 akamaihd.net
 akamaitechnologies.com
 akamaized.net
@@ -46,8 +34,6 @@ cdnjs.cloudflare.com
 ec-ns.sascdn.com
 ssl.p.jwpcdn.com
 widget-cdn.rpxnow.com
-#
-# URL shortners
 adf.ly
 www.adf.ly
 bit.ly
@@ -58,8 +44,6 @@ youtu.be
 ow.ly
 www.ow.ly
 1drv.com
-#
-# Microsoft Windows OS
 c.s-microsoft.com
 ctldl.windowsupdate.com
 displaycatalog.mp.microsoft.com
@@ -73,8 +57,6 @@ onedrive.live.com
 support.microsoft.com
 win10.ipv6.microsoft.com
 www.msftncsi.com
-#
-# Xbox
 attestation.xboxlive.com
 cert.mgt.xboxlive.com
 clientconfig.passport.net
@@ -93,11 +75,7 @@ xboxexperiencesprod.experimentation.xboxlive.com
 xflight.xboxlive.com
 xkms.xbolive.com
 xsts.auth.xboxlive.com
-#
-# Malwarebytes software
 keystone.mwbsys.com
-#
-# Plex
 app.plex.tv
 cpms.spop10.ams.plex.bz
 cpms35.spop10.ams.plex.bz
@@ -122,17 +100,11 @@ tvdb2.plex.tv
 tvthemes.plexapp.com
 tvthemes.plexapp.com.cdn.cloudflare.net
 www.plex.tv
-#
-# Dataplicity - A software used to control RaspberryPi
 www.dataplicity.com
 dataplicity.com
-#
-# Dynamic DNS
 dynupdate.no-ip.com
 no-ip.com
 www.no-ip.com
-#
-# Microsoft Office
 g.live.com
 live.com
 login.live.com
@@ -145,8 +117,6 @@ officeclient.microsoft.com
 outlook.office365.com
 products.office.com
 s.gateway.messenger.live.com
-#
-# YouTube
 i.ytimg.com
 i1.ytimg.com
 manifest.googlevideo.com
@@ -157,32 +127,22 @@ video-stats.l.google.com
 www.youtube-nocookie.com
 youtube-nocookie.com
 youtube.com
-#
-# Sonarr.tv
 apt.sonarr.tv
 download.sonarr.tv
 forums.sonarr.tv
 services.sonarr.tv
 skyhook.sonarr.tv
-#
-# Skype
 ui.skype.com
 apps.skype.com
 pricelist.skype.com
 skype.com
-#
-# Apple
 www.icloud.com
 ax.phobos.apple.com.edgesuite.net
 icloud.com
 appleid.apple.com
 oscp.apple.com
-#
-# Wordpress
 wordpress.com
 wp.com
-#
-# Miscellaneous
 alluremedia.com.au
 api.ipify.org
 bing.com
