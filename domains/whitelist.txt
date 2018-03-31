@@ -196,3 +196,6 @@ ws.audioscrobbler.com
 www.solaredge.com
 www.twitter.com
 yahoo.com
+delivery.vidible.tv
+img.vidible.tv
+videos.vidible.tv
