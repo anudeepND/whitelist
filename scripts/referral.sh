@@ -15,7 +15,7 @@ echo -e "\n"
 if [ $(dpkg-query -W -f='${Status}' gawk 2>/dev/null |  grep -c "ok installed") -eq 0 ];
 then
   echo -e " [...] \e[32m Installing gawk... \e[0m"
-  apt-get install gawk -qq > /dev/null
+  sudo apt-get install gawk -qq > /dev/null
   wait
   echo -e " ${TICK} \e[32m Finished \e[0m"
 fi
