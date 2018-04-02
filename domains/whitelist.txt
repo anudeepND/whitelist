@@ -122,6 +122,7 @@ i1.ytimg.com
 manifest.googlevideo.com
 redirector.googlevideo.com
 s.youtube.com
+s2.youtube.com 
 s.ytimg.com
 video-stats.l.google.com
 www.youtube-nocookie.com
