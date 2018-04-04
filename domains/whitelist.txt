@@ -201,3 +201,4 @@ delivery.vidible.tv
 img.vidible.tv
 videos.vidible.tv
 edge.api.brightcove.com
+cdn.vidible.tv
