@@ -200,3 +200,4 @@ yahoo.com
 delivery.vidible.tv
 img.vidible.tv
 videos.vidible.tv
+edge.api.brightcove.com
