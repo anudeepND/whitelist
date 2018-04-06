@@ -204,3 +204,4 @@ edge.api.brightcove.com
 cdn.vidible.tv
 giphy.com
 lotustalk.com
+tn.com.ar
