@@ -203,3 +203,4 @@ videos.vidible.tv
 edge.api.brightcove.com
 cdn.vidible.tv
 giphy.com
+lotustalk.com
