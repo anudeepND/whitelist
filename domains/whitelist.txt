@@ -328,3 +328,16 @@ csactivate-sjc0.adobe.com
 ereg.adobe.com
 mobiledl.adobe.com
 tt11.adobe.com
+raw.github.com
+outlook.live.com
+telegraaf.nl
+nu.nl
+graph.facebook.com
+extratorrent.cc
+tvaddons.ag
+www.tvaddons.ag
+stats.stackexchange.com
+safelinking.net
+tinyurl.com
+neostrada.nl
+icscards.nl
