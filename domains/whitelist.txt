@@ -207,3 +207,4 @@ tinyurl.com
 s1.wp.com
 nexusrules.officeapps.live.com
 amazonaws.com
+giphy.com
