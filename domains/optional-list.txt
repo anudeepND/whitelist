@@ -85,3 +85,7 @@ weeklyad.target.com.edgesuite.net
 
 dsms0mj1bbhn4.cloudfront.net
 shareaholic.com
+
+# Lotus talk
+lotustalk.com
+www.lotustalk.com
