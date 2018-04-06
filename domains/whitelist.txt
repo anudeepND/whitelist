@@ -202,3 +202,8 @@ img.vidible.tv
 videos.vidible.tv
 edge.api.brightcove.com
 cdn.vidible.tv
+outlook.live.com
+tinyurl.com
+s1.wp.com
+nexusrules.officeapps.live.com
+amazonaws.com
