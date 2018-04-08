@@ -34,15 +34,8 @@ cdnjs.cloudflare.com
 ec-ns.sascdn.com
 ssl.p.jwpcdn.com
 widget-cdn.rpxnow.com
-adf.ly
-www.adf.ly
-bit.ly
-www.bit.ly
-goo.gl
 t.co
 youtu.be
-ow.ly
-www.ow.ly
 1drv.com
 c.s-microsoft.com
 ctldl.windowsupdate.com
