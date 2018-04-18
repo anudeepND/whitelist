@@ -91,7 +91,7 @@ staging.plex.tv
 status.plex.tv
 tvdb2.plex.tv
 tvthemes.plexapp.com
-tvthemes.plexapp.com.cdn.cloudflare.net
+cdn.cloudflare.net
 www.plex.tv
 www.dataplicity.com
 dataplicity.com
@@ -203,3 +203,4 @@ amazonaws.com
 giphy.com
 linuxtracker.org
 www.linuxtracker.org
+om.cbsi.com
