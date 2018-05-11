@@ -34,6 +34,7 @@ scontent.fgdl5-1.fna.fbcdn.net
 facebook.com
 facebook.net
 fbcdn.net
+cdn.fbsbx.com
 
 # GeForce Experience
 
