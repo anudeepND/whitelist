@@ -2,6 +2,11 @@
 # Project home page: https://github.com/anudeepND/whitelist
 # Licence: https://github.com/anudeepND/whitelist/blob/master/LICENSE
 
+# Amazon Alexa and Amazon Shopping app
+
+device-metrics-us-2.amazon.com
+device-metrics-us.amazon.com
+
 # URL shorteners
 
 adf.ly
