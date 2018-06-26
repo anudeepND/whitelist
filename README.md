@@ -1,4 +1,4 @@
-## Commonly whitelisted domains for Pi-Hole.
+## Commonly white listed domains for Pi-Hole.
         
 * * *
         
