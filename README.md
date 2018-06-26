@@ -5,7 +5,7 @@
 A robust collection of commonly white listed websites borrowed from various sources including Pi-Hole subreddit, Pi-Hole forum, Pi-Hole github repository and more!
 Add these domains to your Pi-Hole setup by running a script or manually and make your setup **trouble-free!**
                 
-Want to report a new domain? Want to report exsisting one? Feel free to file an<a href="https://github.com/anudeepND/whitelist/issues">issue</a> tab.
+Want to report a new domain? Want to report exsisting one? Feel free to file an <a href="https://github.com/anudeepND/whitelist/issues">issue</a>.
          
 * * *
          
