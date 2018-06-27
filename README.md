@@ -1,7 +1,5 @@
-## Commonly white listed domains for Pi-Hole.
-        
-* * *
-        
+## Commonly white listed domains for Pi-Hole.     
+          
 A robust collection of commonly white listed websites borrowed from various sources including Pi-Hole subreddit, Pi-Hole forum, Pi-Hole github repository and more!
 Add these domains to your Pi-Hole setup by running a script or manually and make your setup **trouble-free!**
                 
@@ -13,7 +11,7 @@ Want to report a new domain? Want to report exsisting one? Feel free to file an 
        
 - The entire repo is curated.
 - New domains are added frequently.
-- Comes with a shell script i:e; you can add all domains automatically at an instant.
+- Comes with a shell script i.e you can add all domains automatically at an instant.
 - Domains are categorised and are included in 3 different files.
 - If you are a beginner to Pi-Hole, adding these sites resolves many problems. 
        
@@ -21,10 +19,10 @@ Want to report a new domain? Want to report exsisting one? Feel free to file an 
      
 ### Description
        
-The repository contains 3 different files containing different domains.      
+The repository has 3 different files containing different domains.      
        
 ***whitelist.txt***       
-This file contains domains that are safe to whitelist i:e; it does not contain any tracking or advertising sites. Adding this file fixes many problems like YouTube watch history, videos on news sites and so on...
+This file contain domains that are safe to whitelist i.e it does not contain any tracking or advertising sites. Adding this file fixes many problems like YouTube watch history, videos on news sites and so on...
         
 ***referral-sites.txt***      
 People who use services like Slickdeals and Fatwallet needs a few sites (most of  them are ads) to be whitelisted to work properly. This file contains some analytics and ad serving sites, if you don't know what these services are stay away from this list.
