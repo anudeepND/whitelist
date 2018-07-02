@@ -141,6 +141,7 @@ alluremedia.com.au
 api.ipify.org
 bing.com
 brightcove.net
+secure.brightcove.com
 bufferapp.com
 crisp.chat
 d2c8v52ll5s99u.cloudfront.net
