@@ -61,7 +61,6 @@ licensing.xboxlive.com
 notify.xboxlive.com
 title.auth.xboxlive.com
 title.mgt.xboxlive.com
-v10.events.data.microsoft.com
 www.xboxlive.com
 xbox.ipv6.microsoft.com
 xboxexperiencesprod.experimentation.xboxlive.com
