@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="550" src="https://raw.githubusercontent.com/anudeepND/whitelist/master/images/logo.png">
+</p>
+       
 ## Commonly white listed domains for Pi-Hole.     
           
 A robust collection of commonly white listed websites borrowed from various sources including Pi-Hole subreddit, Pi-Hole forum, Pi-Hole github repository and more!
@@ -61,15 +65,28 @@ You can add it manually depending upon the service you use.
          
 <a href="https://chrome.google.com/webstore/detail/dnsthingy-assistant/fdmpekabnlekabjlimjkfmdjajnddgpc">This browser extension</a> will list all of the domains that are queried when a web page is loaded. You can often look at the list of domains and cherry pick the ones that appear to be ad-serving domains.     
         
-![Alt text](https://discourse.pi-hole.net/uploads/default/optimized/1X/6ce0e13813df930288677c87bf0fd5861c150898_1_690x320.png)
-          
+<p align="center">
+  <img width="600" height="500" src="https://raw.githubusercontent.com/anudeepND/blacklist/master/images/img1.jpeg">
+</p>
+      
 ***Using inbuilt Developer tool***     
           
 For Chrome ctrl+shift+I will land you in Developer tools menu.
-![Alt text](http://i.imgur.com/44CHRLV.png)
-       
-***
+      
+<p align="center">
+  <img width="450" height="600" src="https://raw.githubusercontent.com/anudeepND/whitelist/master/images/img2.jpeg">
+</p>      
+          
+***Using an Android app*** 
      
+[Net Guard](https://play.google.com/store/apps/details?id=eu.faircode.netguard) is an Android app that can be used to monitor any specific apps, works on unrooted devices too.   
+        
+<p align="center">
+  <img width="500" height="400" src="https://raw.githubusercontent.com/anudeepND/whitelist/master/images/img3.jpeg">
+</p>
+             
+***
+        
 ### Licence
 ```
 MIT License
