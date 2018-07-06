@@ -2,6 +2,10 @@
 # Project home page: https://github.com/anudeepND/whitelist
 # Licence: https://github.com/anudeepND/whitelist/blob/master/LICENSE
 
+# GTAOnline telemetry. Whitelist this domain to prevent the game from crashing.
+
+prod.telemetry.ros.rockstargames.com
+
 # Amazon Alexa and Amazon Shopping app
 
 device-metrics-us-2.amazon.com
