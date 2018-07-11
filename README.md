@@ -12,7 +12,7 @@ Want to report a new domain? Want to report exsisting one? Feel free to file an 
          
          
   <p align="center">
-  <img height="430" src="https://raw.githubusercontent.com/anudeepND/whitelist/test/images/run.gif">
+  <img height="430" src="https://raw.githubusercontent.com/anudeepND/whitelist/master/images/run.gif">
 </p> 
          
 * * *
