@@ -11,7 +11,7 @@ Add these domains to your Pi-Hole setup by running a script or manually and make
 Want to report a new domain? Want to report exsisting one? Feel free to file an <a href="https://github.com/anudeepND/whitelist/issues">issue</a>.
          
          
-  <p align="center">
+ <p align="center">
   <img height="430" src="https://raw.githubusercontent.com/anudeepND/whitelist/master/images/run.gif">
 </p> 
          
