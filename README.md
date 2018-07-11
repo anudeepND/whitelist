@@ -2,12 +2,18 @@
   <img width="550" src="https://raw.githubusercontent.com/anudeepND/whitelist/master/images/logo.png">
 </p>
        
+       
 ## Commonly white listed domains for Pi-Hole.     
           
 A robust collection of commonly white listed websites borrowed from various sources including Pi-Hole subreddit, Pi-Hole forum, Pi-Hole github repository and more!
 Add these domains to your Pi-Hole setup by running a script or manually and make your setup **trouble-free!**
                 
 Want to report a new domain? Want to report exsisting one? Feel free to file an <a href="https://github.com/anudeepND/whitelist/issues">issue</a>.
+         
+         
+  <p align="center">
+  <img height="430" src="https://raw.githubusercontent.com/anudeepND/whitelist/master/images/run.gif">
+</p> 
          
 * * *
          
