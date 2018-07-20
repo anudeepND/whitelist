@@ -2,7 +2,12 @@
 # Project home page: https://github.com/anudeepND/whitelist
 # Licence: https://github.com/anudeepND/whitelist/blob/master/LICENSE
 
-# GTAOnline telemetry. Whitelist this domain to prevent the game from crashing.
+# Videos not playing on  arstechnica/wired/vogue/newyorker
+# Note: ads before videos may appear after whitelisting this domain
+
+d2c8v52ll5s99u.cloudfront.net
+
+# GTA Online telemetry. Whitelist this domain to prevent the game from crashing.
 
 prod.telemetry.ros.rockstargames.com
 
