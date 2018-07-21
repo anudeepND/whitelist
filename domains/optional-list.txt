@@ -2,6 +2,20 @@
 # Project home page: https://github.com/anudeepND/whitelist
 # Licence: https://github.com/anudeepND/whitelist/blob/master/LICENSE
 
+# SBS Online videos not playing
+
+www.sbs.com.au
+sbs.com.au
+api.sbs.com.au
+media.sbs.com.au
+resources.sbs.com.au
+videocdn-sbs.akamaized.net
+sbsvodns-vh.akamaihd.net
+link.theplatform.com
+e7065.e2.akamaiedge.net
+a463.w10.akamai.net
+a790.w16.akamai.net
+
 # Videos not playing on  arstechnica/wired/vogue/newyorker
 # Note: ads before videos may appear after whitelisting this domain
 
