@@ -3,6 +3,7 @@
 android.clients.google.com
 appsbackup-pa.clients6.google.com
 appsbackup-pa.googleapis.com
+clients1.google.com
 clients2.google.com
 clients3.google.com
 clients4.google.com
