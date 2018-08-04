@@ -59,6 +59,8 @@ cd whitelist/scripts
 sudo chmod +x referral.sh
 sudo ./referral.sh
 ```
+
+**Note: You don't have to clone the repo every time you need to update whitelist file. Navigate to `whitelist/scripts` and run it again `sudo ./referral.sh`**
         
 ***For optional-list.txt***     
 You can add it manually depending upon the service you use. 
