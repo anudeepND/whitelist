@@ -128,3 +128,16 @@ shareaholic.com
 # Lotus talk
 lotustalk.com
 www.lotustalk.com
+
+# Host files
+
+hosts-file.net
+raw.githubusercontent.com
+v.firebog.net
+hostsfile.org
+someonewhocares.org
+hostsfile.mine.nu
+winhelp2002.mvps.org
+sysctl.org
+pgl.yoyo.org
+zeustracker.abuse.ch
