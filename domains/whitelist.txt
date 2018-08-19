@@ -212,3 +212,4 @@ t0.ssl.ak.tiles.virtualearth.net
 secure.avangate.com
 www.synology.com
 synology.com
+instantmessaging-pa.googleapis.com
