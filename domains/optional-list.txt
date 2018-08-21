@@ -147,3 +147,6 @@ zeustracker.abuse.ch
 # https://github.com/anudeepND/whitelist/issues/30
 
 track.ucas.com
+
+# Amazon AWS (???) - whitelist to make Kryptonite work
+sqs.us-east-1.amazonaws.com
