@@ -134,7 +134,7 @@ www.icloud.com
 ax.phobos.apple.com.edgesuite.net
 icloud.com
 appleid.apple.com
-oscp.apple.com
+ocsp.apple.com
 wordpress.com
 wp.com
 alluremedia.com.au
