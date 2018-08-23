@@ -64,6 +64,14 @@ facebook.net
 fbcdn.net
 cdn.fbsbx.com
 edge-mqtt.facebook.com
+0-edge-chat.facebook.com
+1-edge-chat.facebook.com
+2-edge-chat.facebook.com
+3-edge-chat.facebook.com
+4-edge-chat.facebook.com
+5-edge-chat.facebook.com
+6-edge-chat.facebook.com
+edge-chat.facebook.com
 
 # GeForce Experience
 
