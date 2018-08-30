@@ -29,9 +29,9 @@ curl -sS https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/re
 echo -e " ${TICK} \e[32m Adding to whitelist... \e[0m"
 sleep 0.5
 echo -e " ${TICK} \e[32m Removing duplicates... \e[0m"
-gawk -i inplace '!a[$0]++' /etc/pihole/whitelist.txt
+sudo gawk -i inplace '!a[$0]++' /etc/pihole/whitelist.txt
 wait
-echo -e " [...] \e[32m Pi-hole gravity rebuilding lists...This may take a while \e[0m"
+echo -e " [...] \e[32m Pi-hole gravity rebuilding lists. This may take a while... \e[0m"
 pihole -g > /dev/null
 wait
 echo -e " ${TICK} \e[32m Pi-hole's gravity updated \e[0m"
