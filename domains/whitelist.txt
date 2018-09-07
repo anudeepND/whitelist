@@ -213,3 +213,5 @@ secure.avangate.com
 www.synology.com
 synology.com
 instantmessaging-pa.googleapis.com
+archive.org
+web.archive.org
