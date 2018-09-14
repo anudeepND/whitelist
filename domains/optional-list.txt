@@ -162,3 +162,7 @@ sqs.us-east-1.amazonaws.com
 # National Express, UK (nationalexpress.com/en) - Unable to book journey
 
 cdns.gigya.com
+
+# Samsung TV's Amazon Prime Video app
+
+time.samsungcloudsolution.com
