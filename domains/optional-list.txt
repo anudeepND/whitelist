@@ -166,3 +166,7 @@ cdns.gigya.com
 # Samsung TV's Amazon Prime Video app
 
 time.samsungcloudsolution.com
+
+# Nvidia updates
+
+ota-downloads.nvidia.com
