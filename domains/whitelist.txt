@@ -213,3 +213,4 @@ secure.avangate.com
 www.synology.com
 synology.com
 instantmessaging-pa.googleapis.com
+amd.cdn.turner.com
