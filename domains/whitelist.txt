@@ -214,3 +214,4 @@ www.synology.com
 synology.com
 instantmessaging-pa.googleapis.com
 amd.cdn.turner.com
+feeds.feedburner.com
