@@ -170,3 +170,11 @@ time.samsungcloudsolution.com
 # Nvidia updates
 
 ota-downloads.nvidia.com
+
+# Adult Swim Videos on Amazon Firestick
+
+pmd.cdn.turner.com
+i.cdn.turner.com
+s.cdn.turner.com
+z.cdn.turner.com
+amd.cdn.turner.com
