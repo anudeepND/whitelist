@@ -178,3 +178,7 @@ i.cdn.turner.com
 s.cdn.turner.com
 z.cdn.turner.com
 amd.cdn.turner.com
+
+# Videos not playing on www.jacquielawson.com
+
+f1.media.brightcove.com
