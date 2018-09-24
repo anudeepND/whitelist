@@ -182,3 +182,7 @@ amd.cdn.turner.com
 # Videos not playing on www.jacquielawson.com
 
 f1.media.brightcove.com
+
+# Roku HGTV app: Failed to play previous episodes
+
+dcs-vod.apis.anvato.net
