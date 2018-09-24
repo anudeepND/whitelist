@@ -186,3 +186,8 @@ f1.media.brightcove.com
 # Roku HGTV app: Failed to play previous episodes
 
 dcs-vod.apis.anvato.net
+
+# Roku TNT app: Failed to play videos
+
+z.cdn.turner.com
+manifest.auditude.com
