@@ -191,3 +191,7 @@ dcs-vod.apis.anvato.net
 
 z.cdn.turner.com
 manifest.auditude.com
+
+# Fix - Images not loading on www.thecut.com
+
+pixel.nymag.com
