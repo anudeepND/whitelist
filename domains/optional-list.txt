@@ -195,3 +195,15 @@ manifest.auditude.com
 # Fix - Images not loading on www.thecut.com
 
 pixel.nymag.com
+
+# 4players not loading
+4players.de
+
+# Google Docs not loading
+docs.google.com
+
+# YouTube on mobile devices
+m.youtube.com
+
+# Google Translate not loading
+translate.google.com
