@@ -66,7 +66,7 @@ www.xboxlive.com
 xbox.ipv6.microsoft.com
 xboxexperiencesprod.experimentation.xboxlive.com
 xflight.xboxlive.com
-xkms.xbolive.com
+xkms.xboxlive.com
 xsts.auth.xboxlive.com
 keystone.mwbsys.com
 app.plex.tv
