@@ -16,14 +16,12 @@ if [ "$(id -u)" != "0" ] ; then
 	exit 2
 fi
 
-if [ "$(dpkg-query -W -f='${Status}' gawk 2>/dev/null |  grep -c "ok installed")" -eq 0 ];
-then
+if ! (which gawk > /dev/null); then
   echo -e " [...] \e[32m Installing gawk... \e[0m"
   apt-get install gawk -qq > /dev/null
   wait
   echo -e " ${TICK} \e[32m Finished \e[0m"
 fi
-
 
 curl -sS https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt | sudo tee -a /etc/pihole/whitelist.txt >/dev/null
 echo -e " ${TICK} \e[32m Adding to whitelist... \e[0m"
