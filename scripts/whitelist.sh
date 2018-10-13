@@ -18,7 +18,13 @@ fi
 
 if ! (which gawk > /dev/null); then
   echo -e " [...] \e[32m Installing gawk... \e[0m"
-  apt-get install gawk -qq > /dev/null
+  if (which apt-get > /dev/null); then
+       apt-get install gawk -qq > /dev/null
+  elif (which pacman > /dev/null); then
+       pacman -Sqy gawk > /dev/null
+  elif (which dnf > /dev/null); then
+       dnf install gawk > /dev/null
+  fi
   wait
   echo -e " ${TICK} \e[32m Finished \e[0m"
 fi
