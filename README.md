@@ -60,6 +60,13 @@ sudo chmod +x referral.sh
 sudo ./referral.sh
 ```
 
+***For non-standard Pi-Hole installations e.g. Docker***
+Create a `config.cfg` file in the `whitelist/scripts` with the following variables ammended to your installation:
+```
+PIHOLE_LOCATION="/home/pi/pihole"
+DOCKER_EXEC="docker exec -i -t pihole bash "
+``` 
+
 **Note: You don't have to clone the repo every time you need to update whitelist file. Navigate to `whitelist/scripts` and run it again `sudo ./referral.sh`**
         
 ***For optional-list.txt***     

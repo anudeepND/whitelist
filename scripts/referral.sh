@@ -5,7 +5,12 @@
 # Created by Anudeep
 #================================================================================
 TICK="[\e[32m ✔ \e[0m]"
+PIHOLE_LOCATION="/etc/pihole"
 
+if [ -r config.cfg ]; then
+  echo "Reading user config...." >&2
+  source config.cfg
+fi
 
 echo -e " \e[1m This script will download and add domains from the repo to whitelist.txt \e[0m"
 sleep 1
@@ -32,7 +37,7 @@ echo -e " ${TICK} \e[32m Removing duplicates... \e[0m"
 gawk -i inplace '!a[$0]++' /etc/pihole/whitelist.txt
 wait
 echo -e " [...] \e[32m Pi-hole gravity rebuilding lists...This may take a while \e[0m"
-pihole -g > /dev/null
+"${DOCKER_EXEC}" pihole -g > /dev/null
 wait
 echo -e " ${TICK} \e[32m Pi-hole's gravity updated \e[0m"
 echo -e " ${TICK} \e[32m Done! \e[0m"
