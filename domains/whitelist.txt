@@ -214,3 +214,5 @@ www.synology.com
 synology.com
 instantmessaging-pa.googleapis.com
 feeds.feedburner.com
+storage.googleapis.com
+www.storage.googleapis.com
