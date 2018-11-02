@@ -195,3 +195,7 @@ manifest.auditude.com
 # Fix - Images not loading on www.thecut.com
 
 pixel.nymag.com
+
+# Images not loading on aliexpress.com
+
+ae01.alicdn.com
