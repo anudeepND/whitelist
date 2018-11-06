@@ -215,3 +215,5 @@ synology.com
 instantmessaging-pa.googleapis.com
 feeds.feedburner.com
 res.cloudinary.com
+pro.fontawesome.com
+use.fontawesome.com
