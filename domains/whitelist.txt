@@ -215,3 +215,4 @@ synology.com
 instantmessaging-pa.googleapis.com
 feeds.feedburner.com
 res.cloudinary.com
+static.tp-link.com
