@@ -29,7 +29,8 @@ curl -sS https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/op
 echo -e " ${TICK} \e[32m Adding to whitelist... \e[0m"
 sleep 0.5
 echo -e " ${TICK} \e[32m Removing comments and newlines... \e[0m"
-grep -v ^# /etc/pihole/whitelist.txt | grep -v ^$ | sort > /etc/pihole/whitelist.txt
+sed -i -e 's/^#.*$//' -e '/^$/d' /etc/pihole/whitelist.txt
+sort -o /etc/pihole/whitelist.txt /etc/pihole/whitelist.txt
 echo -e " ${TICK} \e[32m Removing duplicates... \e[0m"
 gawk -i inplace '!a[$0]++' /etc/pihole/whitelist.txt
 wait
