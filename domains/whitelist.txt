@@ -79,6 +79,7 @@ gravatar.com
 gstatic.com
 help.ui.xboxlive.com
 hls.ted.com
+https://cdn.ravenjs.com
 i.s-microsoft.com
 i.ytimg.com
 i1.ytimg.com
