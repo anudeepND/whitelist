@@ -134,7 +134,6 @@ placeholdit.imgix.net
 players.brightcove.net
 plex.tv
 pricelist.skype.com
-pro.fontawesome.com
 products.office.com
 proxy.plex.bz
 proxy.plex.tv
@@ -184,7 +183,6 @@ twimg.com
 twitter.com
 ui.skype.com
 unsplash.com
-use.fontawesome.com
 v.shopify.com
 video-stats.l.google.com
 videos.vidible.tv
