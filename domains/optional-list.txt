@@ -199,3 +199,10 @@ pixel.nymag.com
 # Images not loading on aliexpress.com
 
 ae01.alicdn.com
+
+# Netflix - Domains needed for netlix to work correctly
+
+api-global.netflix.com
+ichnaea.netflix.com
+appboot.netflix.com
+secure.netflix.com
