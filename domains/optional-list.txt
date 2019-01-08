@@ -2,43 +2,35 @@
 # Project home page: https://github.com/anudeepND/whitelist
 # Licence: https://github.com/anudeepND/whitelist/blob/master/LICENSE
 
-# SBS Online videos not playing
+# Adult Swim Videos on Amazon Firestick
 
-www.sbs.com.au
-sbs.com.au
-api.sbs.com.au
-media.sbs.com.au
-resources.sbs.com.au
-videocdn-sbs.akamaized.net
-sbsvodns-vh.akamaihd.net
-link.theplatform.com
-e7065.e2.akamaiedge.net
-a463.w10.akamai.net
-a790.w16.akamai.net
-
-# Videos not playing on  arstechnica/wired/vogue/newyorker
-# Note: ads before videos may appear after whitelisting this domain
-
-d2c8v52ll5s99u.cloudfront.net
-
-# GTA Online telemetry. Whitelist this domain to prevent the game from crashing.
-
-prod.telemetry.ros.rockstargames.com
+pmd.cdn.turner.com
+i.cdn.turner.com
+s.cdn.turner.com
+z.cdn.turner.com
+amd.cdn.turner.com
 
 # Amazon Alexa and Amazon Shopping app
 
 device-metrics-us-2.amazon.com
 device-metrics-us.amazon.com
 
-# URL shorteners
+# Amazon AWS (???) - whitelist to make Kryptonite work
 
-adf.ly
-www.adf.ly
-bit.ly
-www.bit.ly
-goo.gl
-ow.ly
-www.ow.ly
+sqs.us-east-1.amazonaws.com
+
+# Bild.de
+
+acdn.adnxs.com
+cdn1.smartadserver.com
+ec-ns.sascdn.com
+
+# DirectTV Now
+
+js.maxmind.com
+directvnow.com
+directvapplications.hb.omtrdc.net
+s.zkcdn.net
 
 # Facebook
 
@@ -73,70 +65,18 @@ edge-mqtt.facebook.com
 6-edge-chat.facebook.com
 edge-chat.facebook.com
 
+# Fix - Images not loading on www.thecut.com
+
+pixel.nymag.com
+
 # GeForce Experience
 
 events.gfe.nvidia.com
 gfwsl.geforce.com
 
-# Sky Go (skygo.sky.de)
+# GTA Online telemetry. Whitelist this domain to prevent the game from crashing.
 
-assets.adobedtm.com
-
-# Bild.de
-
-acdn.adnxs.com
-cdn1.smartadserver.com
-ec-ns.sascdn.com
-
-# WatchESPN
-
-fpdownload.adobe.com
-entitlement.auth.adobe.com
-livepassdl.conviva.com
-
-# Roku TV CW and NBC app
-
-cwtv-mrss-akamai.cwtv.com
-cwtv-prod-elb.digitalsmiths.net
-redirector.googlevideo.com
-
-# DirectTV Now
-
-js.maxmind.com
-directvnow.com
-directvapplications.hb.omtrdc.net
-s.zkcdn.net
-
-# Jackbox.tv 
-
-www.google-analytics.com
-google-analytics.com
-ssl.google-analytics.com
-
-# Pluto.tv
-
-images.pluto.tv
-stitcher.pluto.tv
-siloh.pluto.tv
-silo.pluto.tv
-cdn-mobile.api.pluto.tv
-api.pluto.tv
-players.pluto.tv
-
-# Target's Weekly Ads
-
-weeklyad.target.com
-m.weeklyad.target.com
-weeklyad.target.com.edgesuite.net
-
-# Share buttons on websites
-
-dsms0mj1bbhn4.cloudfront.net
-shareaholic.com
-
-# Lotus talk
-lotustalk.com
-www.lotustalk.com
+prod.telemetry.ros.rockstargames.com
 
 # Host files
 
@@ -151,37 +91,45 @@ sysctl.org
 pgl.yoyo.org
 zeustracker.abuse.ch
 
-# UK University application website
-# https://github.com/anudeepND/whitelist/issues/30
+# Images not loading on aliexpress.com
 
-track.ucas.com
+ae01.alicdn.com
 
-# Amazon AWS (???) - whitelist to make Kryptonite work
-sqs.us-east-1.amazonaws.com
+# Jackbox.tv
+
+www.google-analytics.com
+google-analytics.com
+ssl.google-analytics.com
+
+# Lotus talk
+
+lotustalk.com
+www.lotustalk.com
 
 # National Express, UK (nationalexpress.com/en) - Unable to book journey
 
 cdns.gigya.com
 
-# Samsung TV's Amazon Prime Video app
+# Netflix - Domains needed for netlix to work correctly
 
-time.samsungcloudsolution.com
+api-global.netflix.com
+ichnaea.netflix.com
+appboot.netflix.com
+secure.netflix.com
 
 # Nvidia updates
 
 ota-downloads.nvidia.com
 
-# Adult Swim Videos on Amazon Firestick
+# Pluto.tv
 
-pmd.cdn.turner.com
-i.cdn.turner.com
-s.cdn.turner.com
-z.cdn.turner.com
-amd.cdn.turner.com
-
-# Videos not playing on www.jacquielawson.com
-
-f1.media.brightcove.com
+images.pluto.tv
+stitcher.pluto.tv
+siloh.pluto.tv
+silo.pluto.tv
+cdn-mobile.api.pluto.tv
+api.pluto.tv
+players.pluto.tv
 
 # Roku HGTV app: Failed to play previous episodes
 
@@ -192,17 +140,71 @@ dcs-vod.apis.anvato.net
 z.cdn.turner.com
 manifest.auditude.com
 
-# Fix - Images not loading on www.thecut.com
+# Roku TV CW and NBC app
 
-pixel.nymag.com
+cwtv-mrss-akamai.cwtv.com
+cwtv-prod-elb.digitalsmiths.net
+redirector.googlevideo.com
 
-# Images not loading on aliexpress.com
+# Samsung TV's Amazon Prime Video app
 
-ae01.alicdn.com
+time.samsungcloudsolution.com
 
-# Netflix - Domains needed for netlix to work correctly
+# SBS Online videos not playing
 
-api-global.netflix.com
-ichnaea.netflix.com
-appboot.netflix.com
-secure.netflix.com
+www.sbs.com.au
+sbs.com.au
+api.sbs.com.au
+media.sbs.com.au
+resources.sbs.com.au
+videocdn-sbs.akamaized.net
+sbsvodns-vh.akamaihd.net
+link.theplatform.com
+e7065.e2.akamaiedge.net
+a463.w10.akamai.net
+a790.w16.akamai.net
+
+# Share buttons on websites
+
+dsms0mj1bbhn4.cloudfront.net
+shareaholic.com
+
+# Sky Go (skygo.sky.de)
+
+assets.adobedtm.com
+
+# Target's Weekly Ads
+
+weeklyad.target.com
+m.weeklyad.target.com
+weeklyad.target.com.edgesuite.net
+
+# UK University application website
+# https://github.com/anudeepND/whitelist/issues/30
+
+track.ucas.com
+
+# URL shorteners
+
+adf.ly
+www.adf.ly
+bit.ly
+www.bit.ly
+goo.gl
+ow.ly
+www.ow.ly
+
+# Videos not playing on  arstechnica/wired/vogue/newyorker
+# Note: ads before videos may appear after whitelisting this domain
+
+d2c8v52ll5s99u.cloudfront.net
+
+# Videos not playing on www.jacquielawson.com
+
+f1.media.brightcove.com
+
+# WatchESPN
+
+fpdownload.adobe.com
+entitlement.auth.adobe.com
+livepassdl.conviva.com
