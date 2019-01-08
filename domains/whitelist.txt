@@ -111,6 +111,7 @@ microsoftonline.com
 msftncsi.com
 my.plexapp.com
 nexusrules.officeapps.live.com
+npr-news.streaming.adswizz.com
 nine.plugins.plexapp.com
 no-ip.com
 node.plexapp.com
