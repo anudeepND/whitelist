@@ -19,6 +19,11 @@ device-metrics-us.amazon.com
 
 sqs.us-east-1.amazonaws.com
 
+# Amazon Prime video
+
+fls-eu.amazon.com
+fls-na.amazon.com
+
 # Bild.de
 
 acdn.adnxs.com
