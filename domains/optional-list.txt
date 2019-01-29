@@ -150,6 +150,10 @@ redirector.googlevideo.com
 
 time.samsungcloudsolution.com
 
+# Samsung smart TV's network issue
+
+cdn.samsungcloudsolution.com
+
 # SBS Online videos not playing
 
 www.sbs.com.au
