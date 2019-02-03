@@ -44,7 +44,7 @@ This file contain domains that are needed to be whitelisted depending on the ser
            
 ### Installation and Usage
          
-***For non-standard Pi-Hole installations e.g. Docker***
+***For non-standard Pi-Hole installations e.g. Docker***        
 Create a `config.cfg` file in the `whitelist` folder with the following variables ammended to your installation:
 ```   
 PIHOLE_LOCATION="/home/pi/pihole"
