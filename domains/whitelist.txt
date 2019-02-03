@@ -129,6 +129,7 @@ om.cbsi.com
 onedrive.live.com
 outlook.live.com
 outlook.office365.com
+petri.com
 pinterest.com
 placehold.it
 placeholdit.imgix.net
