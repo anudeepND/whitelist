@@ -121,6 +121,11 @@ secure.netflix.com
 
 ota-downloads.nvidia.com
 
+# Openload - media serving site
+
+openload.co
+www.openload.co
+
 # Pluto.tv
 
 images.pluto.tv
