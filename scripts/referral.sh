@@ -13,11 +13,6 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
 
-	if [ -r config.cfg ]; then
-		  echo "Reading user config...." >&2
-  		source config.cfg
-	fi
-
 	echo -e " \e[1m This script will download and add domains from the repo to whitelist.txt \e[0m"
 	sleep 1
 	echo -e "\n"
