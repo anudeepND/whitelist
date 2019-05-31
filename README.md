@@ -3,7 +3,7 @@
 </p>
        
        
-## Commonly white listed domains for Pi-Hole.     
+## Commonly white listed domains for Pi-Hole (Compatible with Pi-Hole Docker Image).  
           
 A robust collection of commonly white listed websites borrowed from various sources including Pi-Hole subreddit, Pi-Hole forum, Pi-Hole github repository and more!
 Add these domains to your Pi-Hole setup by running a script or manually and make your setup **trouble-free!**
@@ -21,6 +21,7 @@ Want to report a new domain? Want to report exsisting one? Feel free to file an 
        
 - The entire repo is curated.
 - New domains are added frequently.
+- Supports Pi-Hole Docker installation.
 - Comes with a shell script i.e you can add all domains automatically at an instant.
 - Domains are categorised and are included in 3 different files.
 - If you are a beginner to Pi-Hole, adding these sites resolves many problems. 
@@ -43,6 +44,15 @@ This file contain domains that are needed to be whitelisted depending on the ser
 ***
            
 ### Installation and Usage
+        
+ ***For Docker installation***           
+ Access you running Pi-Hole container by `docker exec -it <container-ID> bash` and proceed with the steps given below:
+```
+git clone https://github.com/anudeepND/whitelist.git
+cd whitelist/scripts
+chmod +x whitelist.sh
+./whitelist.sh
+```
          
 ***For whitelist.txt***     
 ```
@@ -60,7 +70,7 @@ sudo chmod +x referral.sh
 sudo ./referral.sh
 ```
 
-**Note: You don't have to clone the repo every time you need to update whitelist file. Navigate to `whitelist/scripts` and run it again `sudo ./referral.sh`**
+**Note: You don't have to clone the repo every time you need to update whitelist file. Navigate to `whitelist/scripts` and run it again `sudo ./whitelist.sh`**
         
 ***For optional-list.txt***     
 You can add it manually depending upon the service you use. 
@@ -99,7 +109,7 @@ For Chrome ctrl+shift+I will land you in Developer tools menu.
 ```
 MIT License
 
-Copyright (c) 2018 Anudeep ND <anudeep@protonmail.com>
+Copyright (c) 2019 Anudeep ND <anudeep@protonmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
