@@ -8,6 +8,7 @@ alluremedia.com.au
 amazonaws.com
 android.clients.google.com
 api.ipify.org
+api.rlje
 app-api.ted.com
 app.plex.tv
 appleid.apple.com
