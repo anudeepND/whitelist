@@ -3,7 +3,6 @@
 # Licence: https://github.com/anudeepND/whitelist/blob/master/LICENSE
 
 # Adult Swim Videos on Amazon Firestick
-
 pmd.cdn.turner.com
 i.cdn.turner.com
 s.cdn.turner.com
@@ -11,29 +10,24 @@ z.cdn.turner.com
 amd.cdn.turner.com
 
 # Amazon Alexa and Amazon Shopping app
-
 device-metrics-us-2.amazon.com
 device-metrics-us.amazon.com
 
 # Amazon AWS (???) - whitelist to make Kryptonite work
-
 sqs.us-east-1.amazonaws.com
 
 # Bild.de
-
 acdn.adnxs.com
 cdn1.smartadserver.com
 ec-ns.sascdn.com
 
 # DirectTV Now
-
 js.maxmind.com
 directvnow.com
 directvapplications.hb.omtrdc.net
 s.zkcdn.net
 
 # Facebook
-
 creative.ak.fbcdn.net
 external-lhr0-1.xx.fbcdn.net
 external-lhr10-1.xx.fbcdn.net
@@ -66,20 +60,16 @@ edge-mqtt.facebook.com
 edge-chat.facebook.com
 
 # Fix - Images not loading on www.thecut.com
-
 pixel.nymag.com
 
 # GeForce Experience
-
 events.gfe.nvidia.com
 gfwsl.geforce.com
 
 # GTA Online telemetry. Whitelist this domain to prevent the game from crashing.
-
 prod.telemetry.ros.rockstargames.com
 
 # Host files
-
 hosts-file.net
 raw.githubusercontent.com
 v.firebog.net
@@ -92,42 +82,34 @@ pgl.yoyo.org
 zeustracker.abuse.ch
 
 # Images not loading on aliexpress.com
-
 ae01.alicdn.com
 
 # Jackbox.tv
-
 www.google-analytics.com
 google-analytics.com
 ssl.google-analytics.com
 
 # Lotus talk
-
 lotustalk.com
 www.lotustalk.com
 
 # National Express, UK (nationalexpress.com/en) - Unable to book journey
-
 cdns.gigya.com
 
 # Netflix - Domains needed for netlix to work correctly
-
 api-global.netflix.com
 ichnaea.netflix.com
 appboot.netflix.com
 secure.netflix.com
 
 # Nvidia updates
-
 ota-downloads.nvidia.com
 
 # Openload - media serving site
-
 openload.co
 www.openload.co
 
 # Pluto.tv
-
 images.pluto.tv
 stitcher.pluto.tv
 siloh.pluto.tv
@@ -137,30 +119,29 @@ api.pluto.tv
 players.pluto.tv
 
 # Roku HGTV app: Failed to play previous episodes
-
 dcs-vod.apis.anvato.net
 
 # Roku TNT app: Failed to play videos
-
 z.cdn.turner.com
 manifest.auditude.com
 
-# Roku TV CW and NBC app
+# Refersion.com (affiliate marketing)
+cdn.refersion.com
+refersion.com
+www.refersion.com
 
+# Roku TV CW and NBC app
 cwtv-mrss-akamai.cwtv.com
 cwtv-prod-elb.digitalsmiths.net
 redirector.googlevideo.com
 
 # Samsung TV's Amazon Prime Video app
-
 time.samsungcloudsolution.com
 
 # Samsung smart TV's network issue
-
 cdn.samsungcloudsolution.com
 
 # SBS Online videos not playing
-
 www.sbs.com.au
 sbs.com.au
 api.sbs.com.au
@@ -174,27 +155,22 @@ a463.w10.akamai.net
 a790.w16.akamai.net
 
 # Share buttons on websites
-
 dsms0mj1bbhn4.cloudfront.net
 shareaholic.com
 
 # Sky Go (skygo.sky.de)
-
 assets.adobedtm.com
 
 # Target's Weekly Ads
-
 weeklyad.target.com
 m.weeklyad.target.com
 weeklyad.target.com.edgesuite.net
 
 # UK University application website
 # https://github.com/anudeepND/whitelist/issues/30
-
 track.ucas.com
 
 # URL shorteners
-
 adf.ly
 www.adf.ly
 bit.ly
@@ -205,15 +181,12 @@ www.ow.ly
 
 # Videos not playing on  arstechnica/wired/vogue/newyorker
 # Note: ads before videos may appear after whitelisting this domain
-
 d2c8v52ll5s99u.cloudfront.net
 
 # Videos not playing on www.jacquielawson.com
-
 f1.media.brightcove.com
 
 # WatchESPN
-
 fpdownload.adobe.com
 entitlement.auth.adobe.com
 livepassdl.conviva.com
