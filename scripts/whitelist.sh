@@ -8,12 +8,8 @@ TICK="[\e[32m ✔ \e[0m]"
 PIHOLE_LOCATION="/etc/pihole"
 GRAVITY_UPDATE_COMMAND="pihole -g"
 
-if [ -r config.cfg ]; then
-  echo "Reading user config...." >&2
-  source config.cfg
-fi
-
 echo -e " \e[1m This script will download and add domains from the repo to whitelist.txt \e[0m"
+echo -e "\n"
 echo -e " \e[1m All the domains in this list are safe to add and doesn't contain any tracking or adserving domains. \e[0m"
 sleep 1
 echo -e "\n"
