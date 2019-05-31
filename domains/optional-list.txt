@@ -190,3 +190,6 @@ f1.media.brightcove.com
 fpdownload.adobe.com
 entitlement.auth.adobe.com
 livepassdl.conviva.com
+
+# streamelements.com (Blocked by Pi-hole regex)
+stats.streamelements.com
