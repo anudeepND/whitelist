@@ -53,6 +53,7 @@ cd whitelist/scripts
 chmod +x whitelist.sh
 ./whitelist.sh
 ```
+If you keep the `/etc/pihole` on a volume outside the container you need to change `PIHOLE_LOCATION`and `GRAVITY_UPDATE_COMMAND` variables based on your setup.
          
 ***For whitelist.txt***     
 ```
