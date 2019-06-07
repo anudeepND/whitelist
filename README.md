@@ -1,8 +1,14 @@
 <p align="center">
   <img width="550" src="https://raw.githubusercontent.com/anudeepND/whitelist/master/images/logo.png">
+</p>    
+      
+<p align="center">  
+  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N6RDWAAZSW5T6&source=url"><img alt="Donate using Paypal" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"></a>
+  &nbsp;&nbsp;
+  <a href="https://liberapay.com/Anudeep/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
 </p>
-       
-       
+         
+         
 ## Commonly white listed domains for Pi-Hole (Compatible with Pi-Hole Docker Image).  
           
 A robust collection of commonly white listed websites borrowed from various sources including Pi-Hole subreddit, Pi-Hole forum, Pi-Hole github repository and more!
@@ -105,7 +111,16 @@ For Chrome ctrl+shift+I will land you in Developer tools menu.
 </p>
              
 ***
-        
+   
+### Donation
+
+All donations are welcome and any amount of money will help me to maintain this project :)
+<p align="center">  
+  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N6RDWAAZSW5T6&source=url"><img alt="Donate using Paypal" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"></a>
+  &nbsp;&nbsp;
+  <a href="https://liberapay.com/Anudeep/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
+</p>
+   
 ### Licence
 ```
 MIT License
