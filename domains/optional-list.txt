@@ -42,6 +42,7 @@ external-lhr8-1.xx.fbcdn.net
 external-lhr9-1.xx.fbcdn.net
 fbcdn-creative-a.akamaihd.net
 graph.facebook.com
+graph.instagram.com
 scontent-lhr3-1.xx.fbcdn.net
 scontent.xx.fbcdn.net
 scontent.fgdl5-1.fna.fbcdn.net
