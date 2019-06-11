@@ -201,5 +201,9 @@ fpdownload.adobe.com
 entitlement.auth.adobe.com
 livepassdl.conviva.com
 
+# Xbox Achievements and game stats sync
+v10.events.data.microsoft.com
+v20.events.data.microsoft.com
+
 # streamelements.com (Blocked by Pi-hole regex)
 stats.streamelements.com
