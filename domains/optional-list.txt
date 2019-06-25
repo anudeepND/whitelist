@@ -169,7 +169,7 @@ apresolve.spotify.com
 upgrade.scdn.com
 market.spotify.com
 spclient.wg.spotify.com
-audio-ake.spotify.com.edgesuite.ne
+audio-ake.spotify.com.edgesuite.net
 
 # Target's Weekly Ads
 weeklyad.target.com
