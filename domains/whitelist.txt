@@ -164,6 +164,7 @@ thetvdb.com
 tinyurl.com
 title.auth.xboxlive.com
 title.mgt.xboxlive.com
+traffic.libsyn.com
 tvdb2.plex.tv
 tvthemes.plexapp.com
 twimg.com
