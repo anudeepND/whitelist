@@ -81,6 +81,17 @@ sudo ./referral.sh
         
 ***For optional-list.txt***     
 You can add it manually depending upon the service you use. 
+
+***For Automated Update***
+cd /opt/
+sudo git clone https://github.com/anudeepND/whitelist.git
+cd whitelist/scripts
+sudo chmod +x referral.sh
+sudo nano /etc/crontab
+Add ```## Update Whitelist weekly @1AM on the last day of the week
+0 1 * * */7     root    /opt/whitelist/scripts/whitelist.sh```
+CTRL + X then Y and Enter
+sudo ./whitelist.sh
           
 ***     
                
