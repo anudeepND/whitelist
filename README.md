@@ -87,14 +87,19 @@ You can add it manually depending upon the service you use.
 cd /opt/
 sudo git clone https://github.com/anudeepND/whitelist.git
 cd whitelist/scripts
-sudo chmod +x referral.sh
-sudo nano /etc/crontab
-Add `## Update Whitelist weekly @1AM on the last day of the week
-0 1 * * */7     root    /opt/whitelist/scripts/whitelist.sh`
-CTRL + X then Y and Enter
-sudo ./whitelist.sh
+sudo chmod +x whitelist.sh
 ```
-          
+Make the script to run the script at 1AM on the last day of the week
+
+`sudo nano /etc/crontab`
+
+Add this line at the end of the file:       
+`0 1 * * */7     root    /opt/whitelist/scripts/whitelist.sh`
+
+CTRL + X then Y and Enter
+
+`sudo ./whitelist.sh`
+   
 ***     
                
 ### How do I determine an ad domain?
