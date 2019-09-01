@@ -35,18 +35,13 @@ Want to report a new domain? Want to report exsisting one? Feel free to file an 
 ***
      
 ### Description
-       
-The repository has 3 different files containing different domains.      
-       
-***whitelist.txt***       
-This file contain domains that are safe to whitelist i.e it does not contain any tracking or advertising sites. Adding this file fixes many problems like YouTube watch history, videos on news sites and so on...
-        
-***referral-sites.txt***      
-People who use services like Slickdeals and Fatwallet needs a few sites (most of  them are ads) to be whitelisted to work properly. This file contains some analytics and ad serving sites, if you don't know what these services are stay away from this list.
-           
-***optional-list.txt***       
-This file contain domains that are needed to be whitelisted depending on the service you use. It may contain some tracking site but sometimes it's necessary to add bad domains to make a few services to work.     
           
+|      File Name     | Domain Count |                                                                                                                                                                Description                                                                                                                                                                | Update Frequency |                                             Raw Link                                            |
+|:------------------:|:------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------------:|:-----------------------------------------------------------------------------------------------:|
+| whitelist.txt      | 194          | This file contain domains that are **safe** to whitelist i.e it does not contain any tracking or advertising sites. Adding this file fixes many problems like YouTube watch history, videos on news sites and so on. If you want to report additional domain feel free to file an [issue](https://github.com/anudeepND/whitelist/issues). | Occasionally     | [link](https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt)      |
+| referral-sites.txt | 72           | People who use services like Slickdeals and Fatwallet needs a few sites (most of  them are either trackers or ads) to be whitelisted to work properly. This file contains some analytics and ad serving sites like **doubleclick.net** and others. **If you don't know what these services are, stay away from this list.**               | Occasionally     | [link](https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/referral-sites.txt) |
+| optional-list.txt  | --           | This file contain domains that are needed to be whitelisted depending on the service you use. It may contain some tracking site but sometimes it's necessary to add bad domains to make a few services to work. Currently there is no script for this list, you have to add domains manually to your Pi-Hole.                             | Occasionally     | [link](https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/optional-list.txt)  |    
+             
 ***
            
 ### Installation and Usage
