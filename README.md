@@ -51,7 +51,6 @@ Want to report a new domain? Want to report exsisting one? Feel free to file an 
 ```
 git clone https://github.com/anudeepND/whitelist.git
 cd whitelist/scripts
-chmod +x whitelist.sh
 ./whitelist.sh
 ```
 If you keep the `/etc/pihole` on a volume outside the container you need to change `PIHOLE_LOCATION`and `GRAVITY_UPDATE_COMMAND` variables based on your setup.
@@ -60,7 +59,6 @@ If you keep the `/etc/pihole` on a volume outside the container you need to chan
 ```
 git clone https://github.com/anudeepND/whitelist.git
 cd whitelist/scripts
-sudo chmod +x whitelist.sh
 sudo ./whitelist.sh
 ```
              
@@ -68,7 +66,6 @@ sudo ./whitelist.sh
 ```
 git clone https://github.com/anudeepND/whitelist.git
 cd whitelist/scripts
-sudo chmod +x referral.sh
 sudo ./referral.sh
 ```
 
@@ -81,8 +78,6 @@ You can add it manually depending upon the service you use.
 ```
 cd /opt/
 sudo git clone https://github.com/anudeepND/whitelist.git
-cd whitelist/scripts
-sudo chmod +x whitelist.sh
 ```
 Make the script to run the script at 1AM on the last day of the week
 
