@@ -13,6 +13,16 @@ amd.cdn.turner.com
 device-metrics-us-2.amazon.com
 device-metrics-us.amazon.com
 
+# Amazon Kindle
+cognito-identity.us-east-1.amazonaws.com
+unagi-na.amazon.com
+ocsp.rootg2.amazontrust.com
+det-ta-g7g.amazon.com
+todo-ta-g7g.amazon.com
+device-messaging-na.amazon.com
+s3-eu-west-1.amazonaws.com
+us-east-1.amazonaws.com
+
 # Amazon AWS (???) - whitelist to make Kryptonite work
 sqs.us-east-1.amazonaws.com
 
