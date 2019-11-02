@@ -70,6 +70,7 @@ edge-mqtt.facebook.com
 5-edge-chat.facebook.com
 6-edge-chat.facebook.com
 edge-chat.facebook.com
+mqtt-mini.facebook.com
 
 # Fix - Images not loading on www.thecut.com
 pixel.nymag.com
