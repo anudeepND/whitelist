@@ -200,6 +200,8 @@ www.bit.ly
 goo.gl
 ow.ly
 www.ow.ly
+amzn.to
+amzn.com
 
 # Videos not playing on  arstechnica/wired/vogue/newyorker
 # Note: ads before videos may appear after whitelisting this domain
