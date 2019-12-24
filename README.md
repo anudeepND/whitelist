@@ -89,7 +89,7 @@ Add this line at the end of the file:
 CTRL + X then Y and Enter
 
 ```
-cd whitelist/scripts
+sudo whitelist/scripts/whitelist.sh
 sudo ./whitelist.sh
 ```
    
