@@ -88,7 +88,10 @@ Add this line at the end of the file:
 
 CTRL + X then Y and Enter
 
-`sudo ./whitelist.sh`
+```
+cd whitelist/scripts
+sudo ./whitelist.sh
+```
    
 ***     
                
