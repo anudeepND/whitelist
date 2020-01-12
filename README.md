@@ -90,7 +90,6 @@ CTRL + X then Y and Enter
 
 ```
 sudo whitelist/scripts/whitelist.sh
-sudo ./whitelist.sh
 ```
    
 ***     
