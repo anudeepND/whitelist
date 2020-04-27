@@ -126,7 +126,7 @@ For Chrome ctrl+shift+I will land you in Developer tools menu.
 
 All donations are welcome and any amount of money will help me to maintain this project :)
 <p align="center">  
-  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N6RDWAAZSW5T6&source=url"><img alt="Donate using Paypal" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"></a>
+  <a href="https://www.paypal.me/anudeepND"><img alt="Donate using Paypal" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"></a>
   &nbsp;&nbsp;
   <a href="https://liberapay.com/Anudeep/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
 </p>
