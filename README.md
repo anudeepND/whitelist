@@ -53,7 +53,13 @@ git clone https://github.com/anudeepND/whitelist.git
 cd whitelist/scripts
 ./whitelist.sh
 ```
-If you keep the `/etc/pihole` on a volume outside the container you need to change `PIHOLE_LOCATION`and `GRAVITY_UPDATE_COMMAND` variables based on your setup.
+If you keep the `/etc/pihole` on a volume outside the container you can set the `PIHOLE_LOCATION` and `GRAVITY_UPDATE_COMMAND` environment variables based on your setup which the scripts will honor. 
+
+For example, if your volume is at `/docker/pihole/etc/` and your container is named `mycontainer`:
+
+```
+PIHOLE_LOCATION=/docker/pihole/etc GRAVITY_UPDATE_COMMAND='docker exec -it mycontainer pihole -w -q' scripts/whitelist.sh 
+```
          
 ***For whitelist.txt***     
 ```
