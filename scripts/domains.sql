@@ -184,3 +184,4 @@ INSERT OR IGNORE INTO domainlist (type, domain, enabled, comment) VALUES (0, 'xs
 INSERT OR IGNORE INTO domainlist (type, domain, enabled, comment) VALUES (0, 'youtube-nocookie.com', 1, 'Owned by Google. YouTube launched a new feature on the site recently that it called Privacy-Enhanced Mode. This domain is used to embed the videos on third-party sites with less trackers. - qjz9zk');
 INSERT OR IGNORE INTO domainlist (type, domain, enabled, comment) VALUES (0, 'youtu.be', 1, 'YouTube URL shortner. Used while sharing videos, playlists, channels etc. - qjz9zk');
 INSERT OR IGNORE INTO domainlist (type, domain, enabled, comment) VALUES (0, 'yt3.ggpht.com', 1, 'Owned by Google. Used to deliver static files over the internet. - qjz9zk');
+INSERT OR IGNORE INTO domainlist (type, domain, enabled, comment) VALUES (0, 'vidtech.cbsinteractive.com', 1, 'Used to deliver videos over the internet. - qjz9zk');

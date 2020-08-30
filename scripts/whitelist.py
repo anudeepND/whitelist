@@ -40,7 +40,7 @@ def fetch_whitelist_url(url):
     return response
 
 whitelist_remote_url = 'https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt'
-remote_sql_url = 'https://raw.githubusercontent.com/hexclann/tetstc/master/domains.sql'
+remote_sql_url = 'https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/domains.sql'
 pihole_location = r'/etc/pihole'
 gravity_whitelist_location = os.path.join(pihole_location, 'whitelist.txt')
 gravity_db_location = os.path.join(pihole_location, 'gravity.db')

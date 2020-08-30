@@ -184,3 +184,4 @@ cws.conviva.com
 livepassdl.conviva.com
 gfwsl.geforce.com
 appspot-preview.l.google.com
+vidtech.cbsinteractive.com
