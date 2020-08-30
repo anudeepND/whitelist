@@ -118,10 +118,6 @@ secure.netflix.com
 # Nvidia updates
 ota-downloads.nvidia.com
 
-# Openload - media serving site
-openload.co
-www.openload.co
-
 # Pluto.tv
 images.pluto.tv
 stitcher.pluto.tv
