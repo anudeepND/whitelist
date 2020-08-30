@@ -4,13 +4,11 @@
 akamaihd.net
 akamaitechnologies.com
 akamaized.net
-alluremedia.com.au
 amazonaws.com
 android.clients.google.com
 api.ipify.org
 api.rlje.net
 app-api.ted.com
-app.plex.tv
 appleid.apple.com
 apps.skype.com
 appsbackup-pa.clients6.google.com
@@ -20,7 +18,6 @@ aspnetcdn.com
 attestation.xboxlive.com
 ax.phobos.apple.com.edgesuite.net
 brightcove.net
-bufferapp.com
 c.s-microsoft.com
 cdn.cloudflare.net
 cdn.embedly.com
@@ -59,7 +56,6 @@ download.sonarr.tv
 drift.com
 driftt.com
 dynupdate.no-ip.com
-ec-ns.sascdn.com
 ecn.dev.virtualearth.net
 edge.api.brightcove.com
 eds.xboxlive.com
@@ -76,7 +72,6 @@ gravatar.com
 gstatic.com
 help.ui.xboxlive.com
 hls.ted.com
-i.s-microsoft.com
 i.ytimg.com
 i1.ytimg.com
 imagesak.secureserver.net
@@ -85,14 +80,12 @@ imgix.net
 imgs.xkcd.com
 instantmessaging-pa.googleapis.com
 intercom.io
-j.mp
 jquery.com
 jsdelivr.net
 keystone.mwbsys.com
 lastfm-img2.akamaized.net
 licensing.xboxlive.com
 live.com
-login.aliexpress.com
 login.live.com
 login.microsoftonline.com
 manifest.googlevideo.com
@@ -121,7 +114,6 @@ om.cbsi.com
 onedrive.live.com
 outlook.live.com
 outlook.office365.com
-pinterest.com
 placehold.it
 placeholdit.imgix.net
 players.brightcove.net
@@ -137,7 +129,6 @@ redirector.googlevideo.com
 res.cloudinary.com
 s.gateway.messenger.live.com
 s.marketwatch.com
-s.shopify.com
 s.youtube.com
 s.ytimg.com
 s1.wp.com
@@ -148,7 +139,6 @@ secure.avangate.com
 secure.brightcove.com
 secure.surveymonkey.com
 services.sonarr.tv
-sharepoint.com
 skyhook.sonarr.tv
 spclient.wg.spotify.com
 ssl.p.jwpcdn.com
@@ -168,15 +158,11 @@ traffic.libsyn.com
 tvdb2.plex.tv
 tvthemes.plexapp.com
 twimg.com
-twitter.com
 ui.skype.com
-v.shopify.com
 video-stats.l.google.com
 videos.vidible.tv
 widget-cdn.rpxnow.com
-wikipedia.org
 win10.ipv6.microsoft.com
-wordpress.com
 wp.com
 ws.audioscrobbler.com
 www.dataplicity.com
@@ -192,3 +178,11 @@ xsts.auth.xboxlive.com
 youtu.be
 youtube-nocookie.com
 yt3.ggpht.com
+zee.cws.conviva.com
+pings.conviva.com
+cws.conviva.com
+livepassdl.conviva.com
+gfwsl.geforce.com
+appspot-preview.l.google.com
+vidtech.cbsinteractive.com
+continuum.dds.microsoft.com
