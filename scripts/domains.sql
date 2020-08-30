@@ -185,3 +185,4 @@ INSERT OR IGNORE INTO domainlist (type, domain, enabled, comment) VALUES (0, 'yo
 INSERT OR IGNORE INTO domainlist (type, domain, enabled, comment) VALUES (0, 'youtu.be', 1, 'YouTube URL shortner. Used while sharing videos, playlists, channels etc. - qjz9zk');
 INSERT OR IGNORE INTO domainlist (type, domain, enabled, comment) VALUES (0, 'yt3.ggpht.com', 1, 'Owned by Google. Used to deliver static files over the internet. - qjz9zk');
 INSERT OR IGNORE INTO domainlist (type, domain, enabled, comment) VALUES (0, 'vidtech.cbsinteractive.com', 1, 'Used to deliver videos over the internet. - qjz9zk');
+INSERT OR IGNORE INTO domainlist (type, domain, enabled, comment) VALUES (0, 'continuum.dds.microsoft.com', 1, 'Used by YourPhone app by Microsoft on Windows 10 for mirroring Android notifications - qjz9zk');
