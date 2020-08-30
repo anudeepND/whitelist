@@ -114,7 +114,7 @@ Add this line at the end of the file:
 CTRL + X then Y and Enter
 
 ```
-sudo whitelist/scripts/whitelist.py
+sudo python3 whitelist/scripts/whitelist.py
 ```
    
 ***     
