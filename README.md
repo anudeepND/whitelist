@@ -14,9 +14,7 @@ Add these domains to your Pi-Hole setup by running a script or manually and make
 
 Want to report a new domain? Want to report existing one? Feel free to file an [issue](https://github.com/anudeepND/whitelist/issues).
 
- <p align="center">
-  <img height="630" alt="Whitelist install demo gif" src="https://raw.githubusercontent.com/anudeepND/whitelist/master/images/whitelist.gif">
-</p>
+![Whitelist install demo gif](https://raw.githubusercontent.com/anudeepND/whitelist/master/images/whitelist.gif)
 
 * * *
 
@@ -48,14 +46,14 @@ Want to report a new domain? Want to report existing one? Feel free to file an [
 
 ***For whitelist.txt***
 
-```shell
+```Shell
 git clone https://github.com/anudeepND/whitelist.git
 sudo python3 whitelist/scripts/whitelist.py
 ```
 
 ***For referral-sites.txt***
 
-```shell
+```Shell
 git clone https://github.com/anudeepND/whitelist.git
 cd whitelist/scripts
 sudo ./referral.sh
@@ -70,7 +68,7 @@ You can add it manually depending upon the service you use.
 
  Access you running Pi-Hole container by `docker exec -it <container-ID> bash` and proceed with the steps given below:
 
-```shell
+```Shell
 git clone https://github.com/anudeepND/whitelist.git
 sudo python3 whitelist/scripts/whitelist.py
 ```
@@ -84,7 +82,7 @@ sudo python3 whitelist/scripts/whitelist.py
  -D or --docker to specify if Pi-hole is running as Docker container
  ```
 
-```shell
+```Shell
 git clone https://github.com/anudeepND/whitelist.git
 sudo python3 whitelist/scripts/whitelist.py --dir /home/docker/pihole/etc-pihole/ --docker
 ```
@@ -95,13 +93,14 @@ sudo python3 whitelist/scripts/whitelist.py --dir /home/docker/pihole/etc-pihole
 
 ## Uninstall
 
- <p align="center">
-  <img height="630" alt="Whitelist uninstall demo gif"src="https://raw.githubusercontent.com/anudeepND/whitelist/master/images/uninstall.gif">
-</p>
+![Whitelist uninstall demo gif](https://raw.githubusercontent.com/anudeepND/whitelist/master/images/uninstall.gif)
 
 As mentioned earlier, the unique string (`qjz9zk`) will come in handy while removing the domains from the database. It uses LIKE operator of the SQLite to match the wildcard string present in the comment section.
 
-`SELECT * FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%'`
+```SQL
+SELECT * FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%'
+```
+
 This statement will remove the domain only if it is present in the exact whitelist section and having the string `qjz9zk`. Domains in the regex list will not be removed by this script.
 
 The older version of the Pi-hole uses a simple text file to store the entries. In this case the script will match the domains present in your Pi-hole to the domains present in the GitHub repo and removes them accordingly.
@@ -113,14 +112,14 @@ The older version of the Pi-hole uses a simple text file to store the entries. I
 
 ## For Automated Update
 
-```shell
+```Shell
 cd /opt/
 sudo git clone https://github.com/anudeepND/whitelist.git
 ```
 
 Make the script to run the script at 1AM on the last day of the week
 
-```shell
+```Shell
 sudo nano /etc/crontab
 ```
 
@@ -132,7 +131,7 @@ Add this line at the end of the file:
 
 CTRL + X then Y and Enter
 
-```shell
+```Shell
 sudo python3 whitelist/scripts/whitelist.py
 ```
 
