@@ -3,6 +3,7 @@
 # Created by Anudeep
 # ================================================================================
 import os
+import argparse
 import sqlite3
 import subprocess
 from urllib.request import Request, urlopen
@@ -42,9 +43,28 @@ def fetch_whitelist_url(url):
     return response
 
 
+def dir_path(string):
+    if os.path.isdir(string):
+        return string
+    else:
+        raise NotADirectoryError(string)
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-d", "--dir", type=dir_path,
+                    help="optional: Pi-hole etc directory")
+parser.add_argument(
+    "-D", "--docker",  action='store_true', help="optional: set if you're using Pi-hole in docker environment")
+args = parser.parse_args()
+
+if args.dir:
+    pihole_location = args.dir
+else:
+    pihole_location = r'/etc/pihole'
+
+
 whitelist_remote_url = 'https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt'
 remote_sql_url = 'https://raw.githubusercontent.com/anudeepND/whitelist/master/scripts/domains.sql'
-pihole_location = r'/etc/pihole'
 gravity_whitelist_location = os.path.join(pihole_location, 'whitelist.txt')
 gravity_db_location = os.path.join(pihole_location, 'gravity.db')
 anudeep_whitelist_location = os.path.join(
@@ -163,8 +183,12 @@ if db_exists:
             sqliteConnection.close()
             print('[i] The database connection is closed')
             print('[i] Restarting Pi-hole. This could take a few seconds')
-            subprocess.call(['pihole', 'restartdns', 'reload'],
-                            stdout=subprocess.DEVNULL)
+            if args.docker is True:
+                subprocess.call("docker exec -it pihole pihole restartdns reload",
+                                shell=True, stdout=subprocess.DEVNULL)
+            else:
+                subprocess.call(['pihole', 'restartdns', 'reload'],
+                                stdout=subprocess.DEVNULL)
             print('\n')
             print('Done. Happy ad-blocking :)')
             print('\n')
