@@ -138,7 +138,7 @@ sudo python3 whitelist/scripts/whitelist.py
 
 ### How to determine an ad domain
 
-***Adam:ONE Assistant (Previously known as DNSthingy***
+***Adam:ONE Assistant (Previously known as DNSthingy)***
 
 [This browser extension](https://chrome.google.com/webstore/detail/adamone-assistant/fdmpekabnlekabjlimjkfmdjajnddgpc) will list all of the domains that are queried when a web page is loaded. You can often look at the list of domains and cherry pick the ones that appear to be ad-serving domains.
 
