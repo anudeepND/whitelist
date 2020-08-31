@@ -87,7 +87,6 @@ git clone https://github.com/anudeepND/whitelist.git
 sudo python3 whitelist/scripts/whitelist.py --dir /home/docker/pihole/etc-pihole/ --docker
 ```
 
-
 **Note: You don't have to clone the repo every time you need to update whitelist file. Navigate to `whitelist/scripts` and run it again `sudo python3 whitelist.py`**
 * * *
 
@@ -137,7 +136,7 @@ sudo python3 whitelist/scripts/whitelist.py
 
 * * *
 
-### How do I determine an ad domain?
+### How to determine an ad domain
 
 ***Adam:ONE Assistant (Previously known as DNSthingy***
 
