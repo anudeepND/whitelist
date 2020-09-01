@@ -133,7 +133,7 @@ if db_exists:
         # find only the domains we added
         number_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
         
-        numberDomains = len(cursor.fetchall())
+        numberDomains = len(number_domains.fetchall())
         
         #print(f'[i] {numberOfDomains} domains are added to whitelist out of {len(whitelist_remote)}')
         print("[i] {} domains are added to whitelist out of {}" .format(numberOfDomains, len(whitelist_remote)))
