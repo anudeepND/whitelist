@@ -130,14 +130,14 @@ if db_exists:
 
         sqliteConnection.commit()
 
-        # total_changes is returning 2x the actual value. ¯\_(ツ)_/¯
-        # if I made a mistake, please create a PR
-        numberOfDomains = sqliteConnection.total_changes
-        if numberOfDomains > 1:
-            numberOfDomains = numberOfDomains // 2
+        # find only the domains we added
+        number_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
+        
+        numberDomains = len(cursor.fetchall())
+        
         #print(f'[i] {numberOfDomains} domains are added to whitelist out of {len(whitelist_remote)}')
         print("[i] {} domains are added to whitelist out of {}" .format(numberOfDomains, len(whitelist_remote)))
-        total_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 OR type = 2 ")
+        total_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 ") # only show exact whitelisted domains as we don't add/remove regex
         #print(f'[i] There are a total of {len(total_domains.fetchall())} domains in your whitelist')
         print("[i] There are a total of {} domains in your whitelist" .format(len(total_domains.fetchall())))
         cursor.close()
