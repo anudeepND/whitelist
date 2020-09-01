@@ -50,6 +50,15 @@ def dir_path(string):
         raise NotADirectoryError(string)
 
 
+def restart_pihole(docker):
+    if docker is True:
+        subprocess.call("docker exec -it pihole pihole restartdns reload",
+                        shell=True, stdout=subprocess.DEVNULL)
+    else:
+        subprocess.call(['pihole', 'restartdns', 'reload'],
+                        stdout=subprocess.DEVNULL)
+
+
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--dir", type=dir_path,
                     help="optional: Pi-hole etc directory")
@@ -91,7 +100,7 @@ print('\n')
 if os.path.exists(pihole_location):
     print('[i] Pi-hole path exists')
 else:
-   # print(f'[X] {pihole_location} was not found')
+    # print(f'[X] {pihole_location} was not found')
 
     print("[X] {} was not found".format(pihole_location))
 
@@ -162,12 +171,12 @@ if db_exists:
         numberOfDomains = sqliteConnection.total_changes
         if numberOfDomains > 1:
             numberOfDomains = numberOfDomains // 2
-        #print(f'[i] {numberOfDomains} domains are added to whitelist out of {len(whitelist_remote)}')
+        # print(f'[i] {numberOfDomains} domains are added to whitelist out of {len(whitelist_remote)}')
         print("[i] {} domains are added to whitelist out of {}" .format(
             numberOfDomains, len(whitelist_remote)))
         total_domains = cursor.execute(
             " SELECT * FROM domainlist WHERE type = 0 OR type = 2 ")
-        #print(f'[i] There are a total of {len(total_domains.fetchall())} domains in your whitelist')
+        # print(f'[i] There are a total of {len(total_domains.fetchall())} domains in your whitelist')
         print("[i] There are a total of {} domains in your whitelist" .format(
             len(total_domains.fetchall())))
         cursor.close()
@@ -183,12 +192,7 @@ if db_exists:
             sqliteConnection.close()
             print('[i] The database connection is closed')
             print('[i] Restarting Pi-hole. This could take a few seconds')
-            if args.docker is True:
-                subprocess.call("docker exec -it pihole pihole restartdns reload",
-                                shell=True, stdout=subprocess.DEVNULL)
-            else:
-                subprocess.call(['pihole', 'restartdns', 'reload'],
-                                stdout=subprocess.DEVNULL)
+            restart_pihole(args.docker)
             print('\n')
             print('Done. Happy ad-blocking :)')
             print('\n')
@@ -232,8 +236,7 @@ else:
 
     print('[i] Done - Domains are now added to your Pi-Hole whitelist\n')
     print('[i] Restarting Pi-hole. This could take a few seconds')
-    subprocess.call(['pihole', 'restartdns', 'reload'],
-                    stdout=subprocess.DEVNULL)
+    restart_pihole(args.docker)
     print('[i] Done. Happy ad-blocking :)')
     print('\n')
     print('Star me on GitHub: https://github.com/anudeepND/whitelist')

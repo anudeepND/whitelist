@@ -50,6 +50,15 @@ def dir_path(string):
         raise NotADirectoryError(string)
 
 
+def restart_pihole(docker):
+    if docker is True:
+        subprocess.call("docker exec -it pihole pihole restartdns reload",
+                        shell=True, stdout=subprocess.DEVNULL)
+    else:
+        subprocess.call(['pihole', 'restartdns', 'reload'],
+                        stdout=subprocess.DEVNULL)
+
+
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--dir", type=dir_path,
                     help="optional: Pi-hole etc directory")
@@ -181,12 +190,7 @@ if db_exists:
             print('[i] The database connection is closed')
 
             print('[i] Restarting Pi-hole. This could take a few seconds')
-            if args.docker is True:
-                subprocess.call("docker exec -it pihole pihole restartdns reload",
-                                shell=True, stdout=subprocess.DEVNULL)
-            else:
-                subprocess.call(['pihole', 'restartdns', 'reload'],
-                                stdout=subprocess.DEVNULL)
+            restart_pihole(args.docker)
             print('\n')
             print('Done. Happy ad-blocking :)')
             print('\n')
@@ -226,12 +230,8 @@ else:
             fWrite.write("{}\n".format(line))
 
     print('[i] Restarting Pi-hole. This could take a few seconds')
-    subprocess.call(['pihole', 'restartdns', 'reload'],
-                    stdout=subprocess.DEVNULL)
-
+    restart_pihole(args.docker)
     print('[i] Done - Domains are now removed your Pi-Hole whitelist')
-    subprocess.call(['pihole', 'restartdns', 'reload'],
-                    stdout=subprocess.DEVNULL)
     print('\n')
     print('Happy ad-blocking :)')
     print('\n')
