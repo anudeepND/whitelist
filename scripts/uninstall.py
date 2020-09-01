@@ -120,20 +120,18 @@ if db_exists:
         cursor = sqliteConnection.cursor()
         print('[i] Successfully Connected to Gravity database')
         total_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
-        print("[i] There are a total of {} domains in your whitelist which are added by my script" .format(len(total_domains.fetchall())))
+        
+        totalDomains = len(total_domains.fetchall())
+        print("[i] There are a total of {} domains in your whitelist which are added by my script" .format(total_domains))
         print('[i] Removing domains in the Gravity database')
         cursor.execute (" DELETE FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
 
         sqliteConnection.commit()
 
-        # total_changes is returning 2x the actual value. ¯\_(ツ)_/¯
-        # if I made a mistake, please create a PR
-        numberOfDomains = sqliteConnection.total_changes
-        if numberOfDomains > 1:
-            numberOfDomains = numberOfDomains // 2
-        print("[i] {} domains are removed" .format(numberOfDomains))
-        remaining_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 OR type = 2 ")
-        print("[i] There are a total of {} domains remaining in your whitelist" .format(len(remaining_domains.fetchall())))
+        # we only removed domains we added so use total_domains
+        print("[i] {} domains are removed" .format(total_domains))
+        remaining_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 ") # only show exact whitelisted domains as we don't add/remove regex
+        print("[i] There are a total of {} domains remaining in your exact whitelist" .format(len(remaining_domains.fetchall())))
 
         cursor.close()
 
