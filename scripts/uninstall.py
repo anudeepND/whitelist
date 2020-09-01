@@ -122,14 +122,14 @@ if db_exists:
         total_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
         
         totalDomains = len(total_domains.fetchall())
-        print("[i] There are a total of {} domains in your whitelist which are added by my script" .format(total_domains))
+        print("[i] There are a total of {} domains in your whitelist which are added by my script" .format(totalDomains))
         print('[i] Removing domains in the Gravity database')
         cursor.execute (" DELETE FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
 
         sqliteConnection.commit()
 
         # we only removed domains we added so use total_domains
-        print("[i] {} domains are removed" .format(total_domains))
+        print("[i] {} domains are removed" .format(totalDomains))
         remaining_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 ") # only show exact whitelisted domains as we don't add/remove regex
         print("[i] There are a total of {} domains remaining in your exact whitelist" .format(len(remaining_domains.fetchall())))
 
