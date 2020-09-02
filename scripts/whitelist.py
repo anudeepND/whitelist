@@ -172,7 +172,6 @@ if db_exists:
         # find only the domains we added
         number_domains = cursor.execute(" SELECT date_added FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
         
-        numberDomains = len(number_domains.fetchall())
         x = 0
 
         for time in number_domains:
