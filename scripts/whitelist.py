@@ -8,7 +8,9 @@ import sqlite3
 import subprocess
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
+import time
 
+today = int(time.time())
 
 def fetch_whitelist_url(url):
 
@@ -168,8 +170,13 @@ if db_exists:
 
         # find only the domains we added
         number_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
-        
-        numberDomains = len(number_domains.fetchall())
+        x = 0
+
+        for time in number_domains:
+           if time[0] >= today:
+             x= x + 1
+
+        numberDomains = x
         
         #print(f'[i] {numberOfDomains} domains are added to whitelist out of {len(whitelist_remote)}')
         print("[i] {} domains are added to whitelist out of {}" .format(numberDomains, len(whitelist_remote)))
