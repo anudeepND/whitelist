@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+#
 # Project homepage: https://github.com/anudeepND/whitelist
 # Licence: https://github.com/anudeepND/whitelist/blob/master/LICENSE
 # Created by Anudeep
