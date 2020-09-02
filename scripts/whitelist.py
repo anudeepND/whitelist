@@ -169,7 +169,7 @@ if db_exists:
         sqliteConnection.commit()
 
         # find only the domains we added
-        number_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
+        number_domains = cursor.execute(" SELECT date_added FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
         x = 0
 
         for time in number_domains:
