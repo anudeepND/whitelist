@@ -165,7 +165,7 @@ if db_exists:
 
         # we only removed domains we added so use total_domains
         print("[i] {} domains are removed" .format(totalDomains))
-        remaining_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 OR type = 2 ") # only show exact whitelisted domains as we don't add/remove regex
+        remaining_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 OR type = 2 ")
         print("[i] There are a total of {} domains remaining in your exact whitelist" .format(len(remaining_domains.fetchall())))
 
         cursor.close()

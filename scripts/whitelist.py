@@ -173,7 +173,7 @@ if db_exists:
         
         #print(f'[i] {numberOfDomains} domains are added to whitelist out of {len(whitelist_remote)}')
         print("[i] {} domains are added to whitelist out of {}" .format(numberDomains, len(whitelist_remote)))
-        total_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 OR type = 2 ") # only show exact whitelisted domains as we don't add/remove regex
+        total_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 OR type = 2 ") 
         #print(f'[i] There are a total of {len(total_domains.fetchall())} domains in your whitelist')
         print("[i] There are a total of {} domains in your whitelist" .format(len(total_domains.fetchall())))
         cursor.close()
