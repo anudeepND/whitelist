@@ -57,8 +57,7 @@ def restart_pihole(docker):
         subprocess.call("docker exec -it pihole pihole restartdns reload",
                         shell=True, stdout=subprocess.DEVNULL)
     else:
-        subprocess.call(['pihole', 'restartdns', 'reload'],
-                        stdout=subprocess.DEVNULL)
+        subprocess.call(['pihole', '-g'], stdout=subprocess.DEVNULL)
 
 
 parser = argparse.ArgumentParser()
@@ -93,7 +92,7 @@ whitelist_old_anudeep = set()
 os.system('clear')
 print('\n')
 print('''
-This script will download and add domains from the repo to whitelist. 
+This script will download and add domains from the repo to whitelist.
 All the domains in this list are safe to add and does not contain any tracking or adserving domains.
 ''')
 print('\n')
@@ -162,29 +161,71 @@ if db_exists:
     try:
         sqliteConnection = sqlite3.connect(gravity_db_location)
         cursor = sqliteConnection.cursor()
+
         print('[i] Successfully Connected to Gravity database')
-        print('[i] Adding / updating domains in the Gravity database')
-        cursor.executescript(remote_sql_str)
 
-        sqliteConnection.commit()
+        number_d = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
 
-        # find only the domains we added
-        number_domains = cursor.execute(" SELECT date_added FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
-        
-        x = 0
+        time.sleep(1)
 
-        for time in number_domains:
-           if time[0] >= today:
-             x= x + 1
+        numberD = number_d.fetchall()
+        numberDlen = len(numberD)
 
-        numberDomains = x
-        
-        #print(f'[i] {numberOfDomains} domains are added to whitelist out of {len(whitelist_remote)}')
-        print("[i] {} domains are added to whitelist out of {}" .format(numberDomains, len(whitelist_remote)))
-        total_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 OR type = 2 ") 
-        #print(f'[i] There are a total of {len(total_domains.fetchall())} domains in your whitelist')
-        print("[i] There are a total of {} domains in your whitelist" .format(len(total_domains.fetchall())))
-        cursor.close()
+        print ("[i] {} Domains from script in whitelist already" .format(numberDlen))
+
+        whitelist_tup = tuple(whitelist_str.split("\n"))
+
+        number_d_n = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment NOT LIKE '%qjz9zk%' ")
+        numberDN = number_d_n.fetchall()
+
+        y = 0
+        # check all other exact whitelisted domains to domains added by script
+        for domain in numberDN:
+           if domain[2] in whitelist_tup:
+             y = y + 1
+
+        numDNlen = y
+        print ("[i] {} user added domain(s) are also in this script and they will NOT be changed." .format(numDNlen))
+        inDatabase = numDNlen + numberDlen
+
+        if inDatabase == remote_sql_lines: # compare total number of whitelisted in database to number script would add _if_ numDNlen = 0
+
+            print ("[i] No Domains Need to be Added!!!")
+            print ("[i] All Domains This Script Contains Are Present in Database!!!")
+            sqliteConnection.close()
+            print('[i] The database connection is closed!!')
+
+        else:
+
+            print('[i] Adding / updating domains in the Gravity database')
+            cursor.executescript(remote_sql_str)
+
+            sqliteConnection.commit()
+
+            time.sleep(1)
+
+            # find only the domains we added
+            number_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
+
+            x = 0
+            print ("[i] The following domains were added ")
+            for time in number_domains:
+               if time[4] >= today:
+                 print ("   {}. {}" .format(x + 1, time[2]))
+                 x = x + 1
+
+            numberDomains = x
+            print ("\n")
+            print ("[i] If no domains listed mkae sure they all have comments.")
+            # Can't figure out how to find info for domains w/o comments...
+            total_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 OR type = 2 ")
+            print("[i] There are a total of {} domains in your whitelist" .format(len(total_domains.fetchall())))
+            cursor.close()
+
+            sqliteConnection.close()
+            print('[i] The database connection is closed')
+            print('[i] Restarting Pi-hole. This could take a few seconds')
+            restart_pihole(args.docker)
 
     except sqlite3.Error as error:
         print('[X] Failed to insert domains into Gravity database', error)
@@ -193,17 +234,12 @@ if db_exists:
         exit(1)
 
     finally:
-        if (sqliteConnection):
-            sqliteConnection.close()
-            print('[i] The database connection is closed')
-            print('[i] Restarting Pi-hole. This could take a few seconds')
-            restart_pihole(args.docker)
-            print('\n')
-            print('Done. Happy ad-blocking :)')
-            print('\n')
-            print('Star me on GitHub: https://github.com/anudeepND/whitelist')
-            print('Buy me a coffee: https://paypal.me/anudeepND')
-            print('\n')
+        print('\n')
+        print('Done. Happy ad-blocking :)')
+        print('\n')
+        print('Star me on GitHub: https://github.com/anudeepND/whitelist')
+        print('Buy me a coffee: https://paypal.me/anudeepND')
+        print('\n')
 
 else:
 
