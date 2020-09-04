@@ -225,6 +225,17 @@ if db_exists:
             # Do Nothing and exit. All domains are accounted for.
             print ("[i] No Domains Need to be Added!!!")
             print("[i] All {} domains to be added by script have been discovered in database" .format(remote_whitelist_lines))
+            
+            # Find total whitelisted domains (regex)
+            total_domains_R = cursor.execute(" SELECT * FROM domainlist WHERE type = 2 ")
+            tdr = len(total_domains_R.fetchall())
+
+            # Find total whitelisted domains (exact)
+            total_domains_E = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 ")
+            tde = len(total_domains_E.fetchall())
+            total_domains = tdr + tde
+            print("[i] There are a total of {} domains in your whitelist (regex({}) & exact({}))" .format(total_domains, tdr, tde))
+            cursor.close()
             sqliteConnection.close()
             print('[i] The database connection is closed!!')
 
