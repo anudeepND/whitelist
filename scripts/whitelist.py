@@ -44,13 +44,11 @@ def fetch_whitelist_url(url):
     # Return the hosts
     return response
 
-
 def dir_path(string):
     if os.path.isdir(string):
         return string
     else:
         raise NotADirectoryError(string)
-
 
 def restart_pihole(docker):
     if docker is True:
@@ -58,7 +56,6 @@ def restart_pihole(docker):
                         shell=True, stdout=subprocess.DEVNULL)
     else:
         subprocess.call(['pihole', '-g'], stdout=subprocess.DEVNULL)
-
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--dir", type=dir_path,
@@ -71,7 +68,6 @@ if args.dir:
     pihole_location = args.dir
 else:
     pihole_location = r'/etc/pihole'
-
 
 whitelist_remote_url = 'https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt'
 remote_sql_url = 'https://raw.githubusercontent.com/anudeepND/whitelist/master/scripts/domains.sql'
@@ -109,14 +105,12 @@ else:
     print('\n')
     exit(1)
 
-
 # Check for write access to /etc/pihole
 if os.access(pihole_location, os.X_OK | os.W_OK):
     print("[i] Write access to {} verified" .format(pihole_location))
     whitelist_str = fetch_whitelist_url(whitelist_remote_url)
     remote_whitelist_lines = whitelist_str.count('\n')
     remote_whitelist_lines += 1
-
 else:
     print("[X] Write access is not available for {}. Please run as root or other privileged user" .format(
         pihole_location))
@@ -155,71 +149,116 @@ else:
     exit(1)
 
 if db_exists:
-    # Create a DB connection
     print('[i] Connecting to Gravity database')
-
-    try:
+    try: # Try to create a DB connection
         sqliteConnection = sqlite3.connect(gravity_db_location)
         cursor = sqliteConnection.cursor()
-
         print('[i] Successfully Connected to Gravity database')
 
+        # Check Gravity database for domains added by script
         number_d = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
 
-        time.sleep(1)
-
         numberD = number_d.fetchall()
-        numberDlen = len(numberD)
 
-        print ("[i] {} Domains from script in whitelist already" .format(numberDlen))
+        # Number of domains in database from script
+        numberD_ = len(numberD)
+        print('[i] Checking Gravity database for domains added by script')
+        print ("[i] {} Domains from script in whitelist already" .format(numberD_))
 
+        # make `whitelist_str` a tuple so we can easily compare
         whitelist_tup = tuple(whitelist_str.split("\n"))
+        # Number of domains that would be added by script
+        whiteTUPlen = len(whitelist_tup)
 
+        # Check Gravity database for domains added by script that are not in new script
+        INgravityNOTnewList = [None] * numberD_
+        z = 0
+        print('[i] Checking Gravity database for domains added previously by script that are not in new script')
+        for INgravityNOTnew in numberD:
+           if not INgravityNOTnew[2] in whitelist_tup:
+               INgravityNOTnewList[z] = INgravityNOTnew
+               z = z + 1
+
+        z = z - 1
+        a = 0
+        INgravityNOTnewListCount = z
+        ignl = False
+        if z >= 0:
+           ignl = True
+           while z >= 0:
+                a = a + 1
+                print ('   {}. {}' .format(a, INgravityNOTnewList[z][2]))
+                # ignl = True
+                z = z - 1
+        # I will figure out how to remove them soon
+
+        # some logic to check if there are any domain(s) added previous by script that are not in new script.
+        if ignl == False:
+          numberDlen = numberD_
+        else:
+            print ('[i] There are {} domain(s) added previously by script that are not in new script.' .format(INgravityNOTnewListCount+1))
+            numberDlen = numberD_ - (INgravityNOTnewListCount+1)
+
+        # Check Gravity database for exact whitelisted domains added by user
         number_d_n = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment NOT LIKE '%qjz9zk%' ")
         numberDN = number_d_n.fetchall()
 
-        y = 0
-        # check all other exact whitelisted domains to domains added by script
+        userADD = 0
+        # check if  whitelisted domains added by user are in script
+        print('[i] Checking Gravity database for domains added by user that are also in script')
         for domain in numberDN:
            if domain[2] in whitelist_tup:
-             y = y + 1
+             print('   {}. {}' .format(userADD+1, domain[2]))
+             userADD = userADD + 1
 
-        numDNlen = y
-        print ("[i] {} user added domain(s) are also in this script and they will NOT be changed." .format(numDNlen))
-        inDatabase = numDNlen + numberDlen
+        # Number of domains in database from user that would also be added by script
+        print ("[i] {} user added domain(s) are also in script and they will NOT be changed." .format(userADD))
 
-        if inDatabase == remote_sql_lines: # compare total number of whitelisted in database to number script would add _if_ numDNlen = 0
+        # Add [Number of domains in database from script] + [Number of domains in database from user that would also be added by script] = inDatabase
+        inDatabase = userADD + numberDlen
 
+        # compare total in database [inDatabase] = total to be added [whiteTUPlen]
+        if inDatabase == whiteTUPlen:
+            # Do Nothing and exit. All domains are accounted for.
             print ("[i] No Domains Need to be Added!!!")
-            print ("[i] All Domains This Script Contains Are Present in Database!!!")
+            print("[i] All {} domains to be added by script have been discovered in database" .format(remote_whitelist_lines))
             sqliteConnection.close()
             print('[i] The database connection is closed!!')
 
         else:
-
+            # Add our domains to Gravity database (unless they are already present)
             print('[i] Adding / updating domains in the Gravity database')
             cursor.executescript(remote_sql_str)
-
+            print('[i] Commiting changes to Gravity database')
+            # Commit changes to Gravity Database
             sqliteConnection.commit()
-
             time.sleep(1)
 
-            # find only the domains we added
+            # Check for domains added by script
             number_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
 
             x = 0
             print ("[i] The following domains were added ")
-            for time in number_domains:
-               if time[4] >= today:
-                 print ("   {}. {}" .format(x + 1, time[2]))
+            # Check for recently added (since script started)
+            for tm in number_domains:
+               if tm[4] >= today:
+                 print ("   {}. {}" .format(x + 1, tm[2]))
                  x = x + 1
 
             numberDomains = x
             print ("\n")
-            print ("[i] If no domains listed mkae sure they all have comments.")
-            # Can't figure out how to find info for domains w/o comments...
-            total_domains = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 OR type = 2 ")
-            print("[i] There are a total of {} domains in your whitelist" .format(len(total_domains.fetchall())))
+            print ("[i] If no domains are listed make sure they have comments.")
+            # I can not figure out how to find info for domains w/o comments in the Web GUI...
+
+            # Find total whitelisted domains (regex)
+            total_domains_R = cursor.execute(" SELECT * FROM domainlist WHERE type = 2 ")
+            tdr = len(total_domains_R.fetchall())
+
+            # Find total whitelisted domains (exact)
+            total_domains_E = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 ")
+            tde = len(total_domains_E.fetchall())
+            total_domains = tdr + tde
+            print("[i] There are a total of {} domains in your whitelist (regex({}) & exact({}))" .format(total_domains, tdr, tde))
             cursor.close()
 
             sqliteConnection.close()
