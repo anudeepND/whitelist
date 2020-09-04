@@ -177,6 +177,9 @@ if db_exists:
         for INgravityNOTnew in numberD:
            if not INgravityNOTnew[2] in whitelist_tup:
                INgravityNOTnewList[z] = INgravityNOTnew
+               # uncomment the next 2 line to delete domains not in script anymore
+               # sql_delete = " DELETE FROM domainlist WHERE type = 0 AND id = '{}' "  .format(INgravityNOTnewList[z][0])
+               # cursor.executescript(sql_delete)
                z = z + 1
 
         z = z - 1
