@@ -69,8 +69,8 @@ if args.dir:
 else:
     pihole_location = r'/etc/pihole'
 
-whitelist_remote_url = 'https://raw.githubusercontent.com/mwoolweaver/whitelist/sql-testing/domains/whitelist.txt'
-remote_sql_url = 'https://raw.githubusercontent.com/mwoolweaver/whitelist/sql-testing/scripts/domains.sql'
+whitelist_remote_url = 'https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt'
+remote_sql_url = 'https://raw.githubusercontent.com/anudeepND/whitelist/master/scripts/domains.sql'
 gravity_whitelist_location = os.path.join(pihole_location, 'whitelist.txt')
 gravity_db_location = os.path.join(pihole_location, 'gravity.db')
 anudeep_whitelist_location = os.path.join(pihole_location, 'anudeep-whitelist.txt')
