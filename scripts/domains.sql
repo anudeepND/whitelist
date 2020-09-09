@@ -186,3 +186,6 @@
 (0, 'yt3.ggpht.com', 1, 'Owned by Google. Used to deliver static files over the internet. - qjz9zk')
 (0, 'vidtech.cbsinteractive.com', 1, 'Used to deliver videos over the internet. - qjz9zk')
 (0, 'continuum.dds.microsoft.com', 1, 'Used by YourPhone app by Microsoft on Windows 10 for mirroring Android notifications - qjz9zk')
+(0, 'connectivitycheck.gstatic.com', 1, 'Owned by Google. Used by mobiles devices to check internet connectivity. Also known as Network Connectivity Status Indicator-NCSI. - qjz9zk')
+(0, 'connectivitycheck.android.com', 1, 'Owned by Google. Used by mobiles devices to check internet connectivity. Also known as Network Connectivity Status Indicator-NCSI. - qjz9zk')
+(0, 'www.msftconnecttest.com', 1, 'Owned by Microsoft. Used by Windows systems to check internet connectivity. Also known as Network Connectivity Status Indicator-NCSI. - qjz9zk')
