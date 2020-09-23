@@ -219,12 +219,12 @@ sudo python3 whitelist/scripts/whitelist.py
 [![Stargazers over time](https://starchart.cc/anudeepND/whitelist.svg)](https://starchart.cc/anudeepND/whitelist)
 
 ## <ins>Support</ins>
-Maintaining an quality open-source takes a lot of time. I have been contributing to this project over 3 years. Your support will help me to keep the project running and provide you quality service. If you have any queries related to PayPal or donation, you can send a DM to me on [`Twitter`](https://twitter.com/anudeepnd).  
+Maintaining an quality open-source takes a lot of time. I have been contributing to this project over 3 years. Your support will help me to keep the project running and provide you quality service. You can also donate using UPI enabled apps such as __`PhonePe`__, __`Google Pay`__, __`Paytm`__ and more! (UPI ID: anudeepnd@ybl). If you have any queries related to PayPal or donation, you can send a DM to me on [`Twitter`](https://twitter.com/anudeepnd).  
 <div align="center">   
-  <a href="https://paypal.me/anudeepND" target="_blank"><img alt="Donate using Paypal" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"></a>
+  <a href="https://paypal.me/anudeepND" target="_blank"><img alt="Donate using Paypal" src="https://raw.githubusercontent.com/anudeepND/whitelist/master/images/paypal.png" width="160" height="40"></a>
   &nbsp;
   &nbsp;
-  <a href="https://liberapay.com/Anudeep/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
+  <a href="https://upi.anudeep.me"><img alt="Donate using UPI apps" src="https://raw.githubusercontent.com/anudeepND/whitelist/master/images/upi.png" width="115" height="40"></a>
 </div>
 
 ## <ins>License</ins>
