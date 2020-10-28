@@ -111,7 +111,7 @@ if os.path.isfile(gravity_db_location) and os.path.getsize(gravity_db_location) 
     print('[i] Pi-Hole Gravity database found')
     remote_sql_str = fetch_whitelist_url(remote_sql_url)
     remote_sql_lines = remote_sql_str.split('\n')
-    if len(remote_sql_str) > 0:
+    if len(remote_sql_lines) > 0:
         print("[i] {} domains and {} SQL queries discovered" .format(remote_whitelist_lines, len(remote_sql_lines)))
         # make `remote_sql_str` a tuple so we can easily compare
         newWhiteTUP = remote_sql_lines
