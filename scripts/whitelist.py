@@ -79,7 +79,10 @@ gravity_whitelist_location = os.path.join(pihole_location, 'whitelist.txt')
 gravity_db_location = os.path.join(pihole_location, 'gravity.db')
 anudeep_whitelist_location = os.path.join(pihole_location, 'anudeep-whitelist.txt') 
 
-anudeep_group_id = 255 # Group ID used in gravity.db
+# use the RGBA code for white (255, 255, 255, 1) as our Group ID we just take out the commas
+# hopefully this number is big enough that no User added groups will overlap 
+# please see ---> https://docs.pi-hole.net/database/gravity/groups/#group-management
+anudeep_group_id = 2552552551 # Group ID used in gravity.db
 anudeep_group = (anudeep_group_id, 1, "anudeepND/whitelist", "https://github.com/anudeepND/whitelist") # Group Information used in gravity.db
 
 db_exists = False
@@ -172,11 +175,11 @@ if db_exists:
         get_groups_table = gravity.execute("SELECT id FROM 'group'")
         fetch_groups = get_groups_table.fetchall()
         
-        groupList = []
+        groupList = [] # create a list for all the group ID's in gravity
         for group in fetch_groups:
             groupList.append(group[0])
 
-        if anudeep_group_id not in groupList:
+        if anudeep_group_id not in groupList: # Check for the one we need before we add it
             print ('    - adding group for anudeepND/whitelist.')
             set_group_in_table = gravity.execute("INSERT OR IGNORE INTO 'group' (id, enabled, name, description) VALUES {} ".format(anudeep_group))
         else:
