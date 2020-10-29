@@ -6,7 +6,8 @@
 # ================================================================================
 import os
 import argparse
-import sqlite3
+from sqlite3 import connect
+from sqlite3 import Error as sqlError
 import subprocess
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
@@ -45,10 +46,11 @@ def dir_path(string):
 
 def restart_pihole(docker):
     if docker is True:
-        subprocess.call("docker exec -it pihole pihole restartdns reload",
-                        shell=True, stdout=subprocess.DEVNULL)
+        print ('')
+        subprocess.call("docker exec -it pihole pihole restartdns reload", shell=True)
     else:
-        subprocess.call(['pihole', '-g'], stdout=subprocess.DEVNULL)
+        print ('')
+        subprocess.call(['pihole', 'restartdns', 'reload'])
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--dir", type=dir_path, help="optional: Pi-hole etc directory")
@@ -113,9 +115,6 @@ if os.path.isfile(gravity_db_location) and os.path.getsize(gravity_db_location) 
     remote_sql_lines = remote_sql_str.split('\n')
     if len(remote_sql_lines) > 0:
         print("[i] {} domains and {} SQL queries discovered" .format(remote_whitelist_lines, len(remote_sql_lines)))
-        # make `remote_sql_str` a tuple so we can easily compare
-        newWhiteTUP = remote_sql_lines
-        # Number of domains that would be added by script
     else:
         print('[X] No remote SQL queries found')
         print('\n')
@@ -134,21 +133,27 @@ else:
     print('\n')
     exit(1)
 
-if db_exists: # IF Pi-hole v5 or newer we have sql database
+if db_exists: # If Pi-hole v5 or newer we have sql database
     print('[i] Connecting to Gravity.')
     try: # Try to create a DB connection
-        sqliteConnection = sqlite3.connect(gravity_db_location)
-        cursor = sqliteConnection.cursor()
+        gravityConnection = connect(gravity_db_location)
+        gravity = gravityConnection.cursor()
         print('[i] Successfully Connected to Gravity.')
         print ('[i] Checking Gravity for domains added by script.')
         # Check Gravity database for domains added by script
-        gravityScript_before = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
+        gravityScript_before = gravity.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
         # fetch all matching entries which will create a tuple for us
         gravScriptBeforeTUP = gravityScript_before.fetchall()
         # Number of domains in database from script
         print ('[i] Found {} domains added by script in whitelist already.'.format(len(gravScriptBeforeTUP)))
+        #
+        # check database for user added exact whitelisted domains
+        print ('[i] Checking Gravity for domains added by user that are also in script.')
+        # Check Gravity database for exact whitelisted domains added by user
+        user_add = gravity.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment NOT LIKE '%qjz9zk%' ")
+        userAddTUP = user_add.fetchall()
         db_connect = True
-    except sqlite3.Error as error:
+    except sqlError as error:
         print('[X] Failed to Connect to Gravity.', error)
         print('\n')
         print('\n')
@@ -185,143 +190,138 @@ else: # else Pi-hole version is older than v5 so no sql database
             fWrite.write("{}\n".format(line))
 
     print('[i] Done - Domains are now added to your Pi-Hole whitelist\n')
-    print('[i] Restarting Pi-hole. This could take a few seconds')
+    print('[i] Reloading Pi-hole lists. This could take a few seconds')
     restart_pihole(args.docker)
     print('[i] Done. Happy ad-blocking :)')
-    print('\n')
+    print('')
     print('Star me on GitHub: https://github.com/anudeepND/whitelist')
     print('Buy me a coffee: https://paypal.me/anudeepND')
-    print('\n')
+    print('')
     exit(0)
 
 if db_connect: # If we can successfully access the Gravity database
     #
-    # Get domains from newWhiteTUP and make a list
-    nW = []
-    newWL = [None]
-    newWhiteList = []
-    for newWhiteDomain in newWhiteTUP:  # for each line found domains.sql
-        nW.append(newWhiteDomain)  # Add line to a controlled list
-        index = nW.index(newWhiteDomain)
-        removeBrace = nW[index].replace('(', '')  # remove (
+    # Get domains from remote_sql_lines and make a list
+    newWhiteList = [] # Make a list of domains
+    for newWhiteDomain in remote_sql_lines:  # for each line found domains.sql
+        removeBrace = newWhiteDomain.replace('(', '')  # remove (
         removeBraces10 = removeBrace.replace(')', '')  # remove )
         newWL = removeBraces10.split(', ')  # split at commas to create a list
         newWhiteList.append(newWL[1].replace('\'', ''))  # remove ' from domain and add to list
     #
-    # check database for user added exact whitelisted domains
-    print ('[i] Checking Gravity for domains added by user that are also in script.')
-    # Check Gravity database for exact whitelisted domains added by user
-    user_add = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment NOT LIKE '%qjz9zk%' ")
-    userAddTUP = user_add.fetchall()
-    #
     # check if  whitelisted domains added by user are in script
-    userAddList = []
+    userAddList = [] # Make a list of domains whitelisted by user
     #
     for userAddINgravity in userAddTUP:  # for every whitelisted domain we found in the database do:
         if userAddINgravity[2] in newWhiteList:  # if the domain we found added by user IS IN our new list count it
             userAddList.append(userAddINgravity[2])  # add the domain we found to the list we created
     #
-    # Make us aware of User Added domains that are also in our script
-    if userAddList != []:  # if we found user added domains from our list in gravity do:
+    # Make user aware of User Added domains that are also in our script
+    if userAddList != []:  # If list not empty
         print ('[i] {} domain(s) added by the user that would be added by script.\n'.format(len(userAddList)))
         for userADD in userAddList:  # 
-            a = userAddList.index(userADD) + 1 # counter for number output to screen
-            print ('    {}. {}'.format(a, userADD))  # Show us what we found
+            print ('    {}. {}'.format(userAddList.index(userADD) + 1, userADD))  # Show us what we found
         print ('')
     else: # If we don't find any
         print ('[i] Found no domains added by the user that would be added by script.') # notify of negative result
     #
     # Check Gravity database for domains added by script that are not in new script
-    INgravityNOTnewList = []
-    gravScriptBeforeList = []
+    INgravityNOTnewList = [] # Make a list of domains that are no longer in this script
+    gravScriptBeforeList = [] # Make a list of domains in gravity that were added by this script
     #
     print ('[i] Checking Gravity for domains previously added by script that are NOT in new script.')
     #
-    for INgravityNOTnew in gravScriptBeforeTUP:  # for every domain previously added by script
+    for INgravityNOTnew in gravScriptBeforeTUP: # for every domain previously added by script
         gravScriptBeforeList.append(INgravityNOTnew[2]) # take domains from gravity and put them in a list for later
-        if not INgravityNOTnew[2] in newWhiteList:  # make sure it is not in new script
+        if not INgravityNOTnew[2] in newWhiteList: # make sure it is not in new script
             INgravityNOTnewList.append(INgravityNOTnew)  # add not found to list for later
     #
-    # If In Gravity because of script but NOT in the new list Prompt for removal
-    if INgravityNOTnewList != []:
+    # If In Gravity because of script but NOT in the new list remove it
+    if INgravityNOTnewList != []: # If list not empty
         print ('[i] {} domain(s) added previously by script that are not in new script.\n'.format(len(INgravityNOTnewList)))
-        for needTOdelete in INgravityNOTnewList:
-            print ('    deleting {}'.format(needTOdelete[2]))
-            sql_delete = " DELETE FROM domainlist WHERE type = 0 AND id = '{}' ".format(needTOdelete[0])
-            cursor.executescript(sql_delete)
+        for needTOdelete in INgravityNOTnewList: # For every domain in gravity we need to delete
+            print ('    - deleting {}. {}'.format(INgravityNOTnewList.index(needTOdelete) + 1, needTOdelete[2])) # show us what needs to be deleted
+            sql_delete = " DELETE FROM domainlist WHERE type = 0 AND id = '{}' ".format(needTOdelete[0]) # Make our sql statement
+            try: 
+                gravity.executescript(sql_delete) # Delete domain from gravity
+            except sqlError as error:
+                print ('Failed to delete {}'.format(needTOdelete[2]))
         print ('')
     else:
         # If not keep going
         print ('[i] Found no domain(s) added previously by script that are not in script.')
     #
     # Check Gravity database for new domains to be added by script
-    INnewNOTgravityList = []
+    INnewNOTgravityList = [] # Make a list of domains we need to add
     #
     print ('[i] Checking script for domains not in Gravity.')
     #
-    for INnewNOTgravity in newWhiteList:  # for every domain in the new script
+    for INnewNOTgravity in newWhiteList:  # for every domain in the new script not in gravity
         if not INnewNOTgravity in gravScriptBeforeList and not INnewNOTgravity in userAddList:  # make sure it is not in gravity or added by user
-            INnewNOTgravityList.append(INnewNOTgravity) # add domain to list we created
+            INnewNOTgravityList.append(INnewNOTgravity) # add domain to list we need to add
     #
     # If there are domains in new list that are NOT in Gravity
-    if INnewNOTgravityList != []:  # Add domains that are missing from new script and not user additions
+    if INnewNOTgravityList != []: # If list not empty
         print ('[i] {} domain(s) NOT in Gravity that are in new script.\n'.format(len(INnewNOTgravityList)))
-        for addNewWhiteDomain in newWhiteList:
-            if addNewWhiteDomain in INnewNOTgravityList:
-                print ('    - Adding {}'.format(addNewWhiteDomain))
-                sql_index = newWhiteList.index(addNewWhiteDomain)
-                sql_add = ' INSERT OR IGNORE INTO domainlist (type, domain, enabled, comment) VALUES {} '.format(nW[sql_index])
-                cursor.executescript(sql_add)
+        for addNewWhiteDomain in newWhiteList: # For every domain in list
+            if addNewWhiteDomain in INnewNOTgravityList: # If it's a domain we need to add
+                print ('    - Adding {}. {}'.format(INnewNOTgravityList.index(addNewWhiteDomain) + 1, addNewWhiteDomain)) # show it to us
+                sql_index = newWhiteList.index(addNewWhiteDomain) # Find it in our list
+                sql_add = ' INSERT OR IGNORE INTO domainlist (type, domain, enabled, comment) VALUES {} '.format(remote_sql_lines[sql_index]) # make our sql statement
+                try:
+                    gravity.executescript(sql_add) # Add domain to gravity
+                except sqlError as error:
+                    print ('Failed to add {}'.format(addNewWhiteDomain))
         #
         # Re-Check Gravity database for domains added by script after we update it
-        gravityScript_after = cursor.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
+        gravityScript_after = gravity.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
         # fetch all matching entries which will create a tuple for us
         gravScriptAfterTUP = gravityScript_after.fetchall()
         # Number of domains in database from script
         #
-        gravScriptAfterList = []
+        gravScriptAfterList = [] # Make a list of domains so we can make sure all missing domains are in gravity
         print ('')
         print ('[i] Checking Gravity for newly added domains.')
         print ('')
         for gravScriptAfterDomain in gravScriptAfterTUP:
-            gravScriptAfterList.append(gravScriptAfterDomain[2])
-
-        weFOUNDitList = []
+            gravScriptAfterList.append(gravScriptAfterDomain[2]) # only get the domain
+        #
+        weFOUNDitList = [] # Make list of missing domains we found
         for weFOUNDit in INnewNOTgravityList:
             if weFOUNDit in gravScriptAfterList:
                 weFOUNDitList.append(weFOUNDit)
-                print ('    - Found  {} '.format(weFOUNDit))
-
+                print ('    - Found  {}. {} '.format(INnewNOTgravityList.index(weFOUNDit) + 1, weFOUNDit))
+        # Assuming all domains are the same the number will be equal
         if len(weFOUNDitList) == len(INnewNOTgravityList):
             # All domains are accounted for.
             print ('\n[i] All {} missing domain(s) to be added by script have been discovered in Gravity.'.format(len(INnewNOTgravityList)))
         else:
             print ('\n[i] All {} new domain(s) have not been added to Gravity.'.format(len(INnewNOTgravityList)))
         #
-        print ('[i] All {} domains to be added by script have been discovered in Gravity'.format(len(newWhiteTUP)))
+        print ('[i] All {} domains to be added by script have been discovered in Gravity'.format(len(remote_sql_lines)))
     else:
         # We should be done now
         # Do Nothing and exit. All domains are accounted for.
-        print ('[i] All {} domains to be added by script have been discovered in Gravity'.format(len(newWhiteTUP)))
+        print ('[i] All {} domains to be added by script have been discovered in Gravity'.format(len(remote_sql_lines)))
     #
     # Find total whitelisted domains (regex)
-    total_domains_R = cursor.execute(' SELECT * FROM domainlist WHERE type = 2 ')
+    total_domains_R = gravity.execute(' SELECT * FROM domainlist WHERE type = 2 ')
     tdr = len(total_domains_R.fetchall())
     # Find total whitelisted domains (exact)
-    total_domains_E = cursor.execute(' SELECT * FROM domainlist WHERE type = 0 ')
+    total_domains_E = gravity.execute(' SELECT * FROM domainlist WHERE type = 0 ')
     tde = len(total_domains_E.fetchall())
     total_domains = tdr + tde
     print ('[i] There are a total of {} domains in your whitelist (regex({}) & exact({}))'.format(total_domains, tdr, tde))
-    sqliteConnection.close()
+    gravityConnection.close()
     print ('[i] The database connection is closed')
-    if INnewNOTgravityList != []:
-        print ('[i] Restarting Pi-hole. This could take a few seconds')
+    if INnewNOTgravityList != [] or INgravityNOTnewList != []:
+        print ('[i] Reloading Pi-hole lists. This could take a few seconds')
         restart_pihole(args.docker)
 
-    print ('\n')
+    print ('')
     print ('Done. Happy ad-blocking :)')
-    print ('\n')
+    print ('')
     print ('Star me on GitHub: https://github.com/anudeepND/whitelist')
     print ('Buy me a coffee: https://paypal.me/anudeepND')
-    print ('\n')
+    print ('')
     exit(0)
