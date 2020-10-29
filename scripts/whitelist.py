@@ -77,10 +77,10 @@ whitelist_remote_url = 'https://raw.githubusercontent.com/anudeepND/whitelist/ma
 remote_sql_url = 'https://raw.githubusercontent.com/anudeepND/whitelist/master/scripts/domains.sql'
 gravity_whitelist_location = os.path.join(pihole_location, 'whitelist.txt')
 gravity_db_location = os.path.join(pihole_location, 'gravity.db')
-anudeep_whitelist_location = os.path.join(pihole_location, 'anudeep-whitelist.txt')
+anudeep_whitelist_location = os.path.join(pihole_location, 'anudeep-whitelist.txt') 
 
-anudeep_group_id = 255
-anudeep_group = (255, 1, "anudeepND/whitelist", "https://github.com/anudeepND/whitelist")
+anudeep_group_id = 255 # Group ID used in gravity.db
+anudeep_group = (anudeep_group_id, 1, "anudeepND/whitelist", "https://github.com/anudeepND/whitelist") # Group Information used in gravity.db
 
 db_exists = False
 db_connect = False
@@ -168,12 +168,19 @@ if db_exists:
         user_add = gravity.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment NOT LIKE '%qjz9zk%' ")
         userAddTUP = user_add.fetchall()
 
+        print ('[i] Checking Gravity for anudeepND/whitelist group.')
         get_groups_table = gravity.execute("SELECT id FROM 'group'")
         fetch_groups = get_groups_table.fetchall()
-        groups_in_gravity = fetch_groups[0]
+        
+        groupList = []
+        for group in fetch_groups:
+            groupList.append(group[0])
 
-        if anudeep_group_id not in groups_in_gravity:
+        if anudeep_group_id not in groupList:
+            print ('    - adding group for anudeepND/whitelist.')
             set_group_in_table = gravity.execute("INSERT OR IGNORE INTO 'group' (id, enabled, name, description) VALUES {} ".format(anudeep_group))
+        else:
+            print ('[i] Found anudeepND/whitelist group in Gravity.')
         
         db_connect = True
     except sqlError as error:
@@ -234,8 +241,6 @@ if db_connect:
         removeBraces10 = removeBrace.replace(')', '')  # remove )
         newWL = removeBraces10.split(', ')  # split at commas to create a list
         newWhiteList.append(newWL[1].replace('\'', ''))  # remove ' from domain and add to list
-
-    print (fetch_groups)
 
     # check if  whitelisted domains added by user are in script
     userAddList = [] # Make a list of domains whitelisted by user
