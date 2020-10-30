@@ -157,29 +157,38 @@ if db_exists:
     try:
         gravityConnection = connect(gravity_db_location)
         gravity = gravityConnection.cursor()
+
         print('[i] Successfully Connected to Gravity.')
         print ('[i] Checking Gravity for domains added by script.')
+
         # Get domains in gravity database added by script
         gravityScript_before = gravity.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
+
         # fetch all matching entries which will create a tuple for us
         gravScriptBeforeTUP = gravityScript_before.fetchall()
+
         # Number of domains in database from script
         print ('[i] Found {} domains added by script in whitelist already.'.format(len(gravScriptBeforeTUP)))
+
         # check database for user added exact whitelisted domains
         print ('[i] Checking Gravity for domains added by user that are also in script.')
+
         # Check Gravity database for exact whitelisted domains added by user
         user_add = gravity.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment NOT LIKE '%qjz9zk%' ")
         userAddTUP = user_add.fetchall()
 
+        # Check Gravity database for anudeepND/whitelist group
         print ('[i] Checking Gravity for anudeepND/whitelist group.')
         get_groups_table = gravity.execute("SELECT id FROM 'group'")
         fetch_groups = get_groups_table.fetchall()
         
-        groupList = [] # create a list for all the group ID's in gravity
+        # create a list for all the group ID's in gravity
+        groupList = []
         for group in fetch_groups:
             groupList.append(group[0])
-
-        if anudeep_group_id not in groupList: # Check for the one we need before we add it
+        
+        # Check for the one we need before we add it
+        if anudeep_group_id not in groupList:
             print ('    - adding group for anudeepND/whitelist.')
             set_group_in_table = gravity.execute("INSERT OR IGNORE INTO 'group' (id, enabled, name, description) VALUES {} ".format(anudeep_group))
         else:
@@ -304,7 +313,11 @@ if db_connect:
                 print ('    - Adding {}. {}'.format(INnewNOTgravityList.index(addNewWhiteDomain) + 1, addNewWhiteDomain)) # show it to us
                 sql_index = newWhiteList.index(addNewWhiteDomain) # Find it in our list
                 sql_add_domain_to_whitelist = ' INSERT OR IGNORE INTO domainlist (type, domain, enabled, comment) VALUES {} '.format(remote_sql_lines[sql_index]) # make our sql statement
-                gravity.executescript(sql_add_domain_to_whitelist)
+                try:
+                    gravity.executescript(sql_add_domain_to_whitelist)
+                except sqlError as error:
+                    print ('Failed to add {}'.format(addNewWhiteDomain))
+                    print (error)
 
         # Re-Check Gravity database for domains added by script after we update it
         gravityScript_after = gravity.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment LIKE '%qjz9zk%' ")
@@ -327,7 +340,11 @@ if db_connect:
             only_domainlist_id = fetch_domainID[0][0]
             domain_group_id = fetch_domainID[0][1]
             if domain_group_id != anudeep_group_id: # and make sure it's in the correct group
-                gravity.execute("UPDATE domainlist_by_group SET group_id={} WHERE domainlist_id = {} ".format(anudeep_group_id, only_domainlist_id))
+                try:
+                    gravity.execute("UPDATE domainlist_by_group SET group_id={} WHERE domainlist_id = {} ".format(anudeep_group_id, only_domainlist_id))
+                except sqlError as error:
+                    print ('Could not add domain to group')
+                    print (error)
 
         weFOUNDitList = [] # Make list of missing domains we found
         for weFOUNDit in INnewNOTgravityList:
