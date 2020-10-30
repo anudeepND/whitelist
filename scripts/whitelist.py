@@ -174,7 +174,7 @@ if db_exists:
         print ('[i] Checking Gravity for domains added by user that are also in script.')
 
         # Check Gravity database for exact whitelisted domains added by user
-        user_add = gravity.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment NOT LIKE '%qjz9zk%' ")
+        user_add = gravity.execute(" SELECT * FROM domainlist WHERE type = 0 AND comment NOT LIKE '%qjz9zk%' OR comment isnull ")
         userAddTUP = user_add.fetchall()
 
         # Check Gravity database for anudeepND/whitelist group
