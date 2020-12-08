@@ -148,9 +148,15 @@ git clone https://github.com/anudeepND/whitelist.git
 sudo python3 whitelist/scripts/whitelist.py
 ```
 
+```Shell
+git clone https://github.com/anudeepND/whitelist.git
+cd whitelist/scripts
+sudo ./referral.sh
+```
+
 #### For Docker installation (without Python3 support) or /etc/pihole on different directory
 
- You can pass two optional arguments to whitelist.py and uninstall.py:
+ You can pass two optional arguments to whitelist.py, uninstall.py, and referral.sh:
 
 ```Text
  -d or --dir to specify the Pi-hole etc directory (in normal install should be /etc/pihole)
@@ -162,6 +168,11 @@ git clone https://github.com/anudeepND/whitelist.git
 sudo python3 whitelist/scripts/whitelist.py --dir /home/docker/pihole/etc-pihole/ --docker
 ```
 
+```Shell
+git clone https://github.com/anudeepND/whitelist.git
+cd whitelist/scripts
+sudo ./referral.sh --dir /home/docker/pihole/etc-pihole/ --docker
+```
 __Note: You don't have to clone the repo every time you need to update whitelist file. Navigate to `whitelist/scripts` and run it again `sudo python3 whitelist.py__
 
 ## <ins>Uninstall</ins>
