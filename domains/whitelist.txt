@@ -27,6 +27,7 @@ cdn2.optimizely.com
 cdn3.optimizely.com
 cdnjs.cloudflare.com
 cert.mgt.xboxlive.com
+chtbl.com
 clientconfig.passport.net
 clients1.google.com
 clients2.google.com
