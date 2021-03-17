@@ -73,3 +73,5 @@ clickserve.dartsearch.net
 shareasale-analytics.com
 www.kqzyfj.com
 go.skimresources.com
+goto.walmart.com
+goto.target.com
