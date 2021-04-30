@@ -1,6 +1,7 @@
 0.client-channel.google.com
 1drv.com
 2.android.pool.ntp.org
+ajax.googleapis.com
 akamaihd.net
 akamaitechnologies.com
 akamaized.net
@@ -89,6 +90,7 @@ live.com
 login.live.com
 login.microsoftonline.com
 manifest.googlevideo.com
+maps.googleapis.com
 meta-db-worker02.pop.ric.plex.bz
 meta.plex.bz
 meta.plex.tv
@@ -106,6 +108,8 @@ ns2.dropbox.com
 o1.email.plex.tv
 o2.sg0.plex.tv
 ocsp.apple.com
+ocsp.pki.goog
+ocsp.sca1b.amazontrust.com
 office.com
 office.net
 office365.com
@@ -135,6 +139,7 @@ s1.wp.com
 s2.youtube.com
 s3.amazonaws.com
 sa.symcb.com
+safebrowsing.googleapis.com
 secure.avangate.com
 secure.brightcove.com
 secure.surveymonkey.com
@@ -163,6 +168,7 @@ video-stats.l.google.com
 videos.vidible.tv
 widget-cdn.rpxnow.com
 win10.ipv6.microsoft.com
+wl.spotify.com
 wp.com
 ws.audioscrobbler.com
 www.dataplicity.com
