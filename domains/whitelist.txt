@@ -6,6 +6,7 @@ akamaitechnologies.com
 akamaized.net
 amazonaws.com
 android.clients.google.com
+api.formspark.io
 api.ipify.org
 api.rlje.net
 app-api.ted.com
@@ -60,6 +61,7 @@ ecn.dev.virtualearth.net
 edge.api.brightcove.com
 eds.xboxlive.com
 fonts.gstatic.com
+formspark.io
 forums.sonarr.tv
 g.live.com
 geo-prod.do.dsp.mp.microsoft.com
@@ -144,6 +146,7 @@ spclient.wg.spotify.com
 ssl.p.jwpcdn.com
 staging.plex.tv
 status.plex.tv
+submit-form.com
 t.co
 t0.ssl.ak.dynamic.tiles.virtualearth.net
 t0.ssl.ak.tiles.virtualearth.net
