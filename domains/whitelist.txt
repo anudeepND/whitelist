@@ -34,6 +34,7 @@ clients3.google.com
 clients4.google.com
 clients5.google.com
 clients6.google.com
+content.ibanking-services.com
 cpms.spop10.ams.plex.bz
 cpms35.spop10.ams.plex.bz
 cse.google.com
