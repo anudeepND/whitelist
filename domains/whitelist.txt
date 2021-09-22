@@ -159,6 +159,7 @@ tvdb2.plex.tv
 tvthemes.plexapp.com
 twimg.com
 ui.skype.com
+update.code.visualstudio.com
 video-stats.l.google.com
 videos.vidible.tv
 widget-cdn.rpxnow.com
