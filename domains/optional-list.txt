@@ -114,6 +114,9 @@ api-global.netflix.com
 appboot.netflix.com
 secure.netflix.com
 
+# NowTV UK - AppleTV
+dpm.demdex.net
+
 # Nvidia updates
 ota-downloads.nvidia.com
 
