@@ -53,6 +53,7 @@ dl.dropbox.com
 dl.dropboxusercontent.com
 dns.msftncsi.com
 download.sonarr.tv
+dpm.demdex.net
 drift.com
 driftt.com
 dynupdate.no-ip.com
