@@ -189,3 +189,10 @@ continuum.dds.microsoft.com
 connectivitycheck.gstatic.com
 connectivitycheck.android.com
 www.msftconnecttest.com
+beacons2.gvt2.com
+beacons.gvt2.com
+beacons5.gvt2.com
+beacons.gcp.gvt2.com
+beacons5.gvt3.com
+beacons3.gvt2.com
+beacons4.gvt2.com
