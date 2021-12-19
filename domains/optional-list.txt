@@ -188,6 +188,7 @@ weeklyad.target.com.edgesuite.net
 track.ucas.com
 
 # URL shorteners
+t.ly
 adf.ly
 www.adf.ly
 bit.ly
