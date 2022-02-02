@@ -61,7 +61,7 @@ def restart_pihole(docker):
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--dir", type=dir_path, help="optional: Pi-hole etc directory")
-parser.add_argument("-D", "--docker",  action='store_true', help="optional: set if you're using Pi-hole in docker environment")
+parser.add_argument("-D", "--docker", action='store_true', help="optional: set if you're using Pi-hole in docker environment")
 args = parser.parse_args()
 
 if args.dir:
