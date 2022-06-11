@@ -141,7 +141,7 @@ You can add it manually depending upon the service you use.
 
 #### For Docker installation (with Python3 support)
 
- Access you running Pi-Hole container by `docker exec -it <container-ID> bash` and proceed with the steps given below:
+ Access your running Pi-Hole container by `docker exec -it <container-ID> bash` and proceed with the steps given below:
 
 ```Shell
 git clone https://github.com/anudeepND/whitelist.git
@@ -173,7 +173,7 @@ git clone https://github.com/anudeepND/whitelist.git
 cd whitelist/scripts
 sudo ./referral.sh --dir /home/docker/pihole/etc-pihole/ --docker
 ```
-__Note: You don't have to clone the repo every time you need to update whitelist file. Navigate to `whitelist/scripts` and run it again `sudo python3 whitelist.py__
+__Note: You don't have to clone the repo every time you need to update the whitelist file. Navigate to `whitelist/scripts` and run it again with `sudo python3 whitelist.py__
 
 ## <ins>Uninstall</ins>
 
