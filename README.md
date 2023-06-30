@@ -200,22 +200,58 @@ cd /opt/
 sudo git clone https://github.com/anudeepND/whitelist.git
 ```
 
-Make the script to run the script at 1AM on the last day of the week
+Make the script to run the script once a week
 
 ```Shell
-sudo nano /etc/crontab
+sudo nano /etc/cron.weekly/whitelist
 ```
 
-Add this line at the end of the file:
+Add this to the file:
 
-```Text
-0 1 * * */7     root    /opt/whitelist/scripts/whitelist.py
+```bash
+#! /usr/bin/env bash
+
+python3 /opt/whitelist/scripts/whitelist.py
 ```
 
-CTRL + X then Y and Enter
+### systemd
+
+Make the timer to run the script once a week
 
 ```Shell
-sudo python3 whitelist/scripts/whitelist.py
+sudo nano /etc/systemd/system/whitelist.timer
+```
+
+Add this to the file:
+
+```conf
+[Unit]
+Description=Timer for reloading Pi-Hole Whitelist
+
+[Timer]
+OnCalendar=Sun *-*-* 01:00:00
+AccuracySec=1h
+RandomizedDelaySec=6h
+
+[Install]
+WantedBy=timers.target
+```
+
+Make the script to run the script
+
+```shell
+sudo nano /etc/systemd/system/whitelist.service
+```
+
+Add this to the file:
+
+```conf
+[Unit]
+Description=Pi-Hole Whitelist update
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /opt/whitelist/scripts/whitelist.py
 ```
 
 ## <ins>How do I determine an ad domain?</ins>
