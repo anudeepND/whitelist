@@ -97,6 +97,9 @@ zeustracker.abuse.ch
 # Images not loading on aliexpress.com
 ae01.alicdn.com
 
+# Discord
+click.discord.com
+
 # Jackbox.tv
 www.google-analytics.com
 google-analytics.com
